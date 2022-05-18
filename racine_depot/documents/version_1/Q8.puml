@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+participant "laby:Labyrinthe" as l
+participant "perso:Perso" as p
+
+
+-> l:deplacerPerso(GAUCHE)
+activate l
+l -> p:getX()
+activate p
+l <-- p: int
+deactivate p
+l -> p:getY()
+activate p
+l <-- p: int
+deactivate p
+l -> l:getSuivant(x,y,"gauche")
+activate l
+l --> l:int[] suivante
+deactivate l
+alt !this.murs[suivante[0]][suivante[1]]
+    l -> p:setX(suivante[0])
+    activate p
+    l <-- p
+    deactivate p
+    l -> p:setY(suivante[1]))
+    activate p
+    l <-- p
+    deactivate p
+end
+<-- l
+deactivate l
+
+@enduml
