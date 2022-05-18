@@ -1,0 +1,26 @@
+@startuml
+
+class Labyrinthe{
++Perso:Personnage
+
++Labyrinthe(nom:String)
++getSuivant(x:int, y:int,action:String) :int[]
++Labyrinthe(nom:String)
++deplacerPerso(Action:String)
++etrefini():boolean
++getLength():int
++getMur(x:int,y:int):boolean
+}
+
+class Personnage{
+-x:int
+-y:int
++Personnage(x:int,y:int)
++etrePresent(dx:int,dy:int):boolean
++getX():int
++getY():int
+
+}
+Labyrinthe-up->Personnage:perso:Personnage
+
+@enduml
