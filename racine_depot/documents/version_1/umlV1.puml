@@ -21,6 +21,6 @@ class Personnage{
 +getY():int
 
 }
-Labyrinthe-up->Personnage:perso:Personnage
+Labyrinthe "1"-up->"1" Personnage:perso:Personnage
 
 @enduml
