@@ -1,3 +1,8 @@
+#intelliJ
+.idea
+.out
+.target
+
 # Compiled class file
 *.class
 
