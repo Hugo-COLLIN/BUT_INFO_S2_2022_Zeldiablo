@@ -42,14 +42,7 @@ class LabyDessin {
     + dessinerJeu (jeu : Jeu, canvas : Canvas)
 }
 
-class MainLaby {
-    + main (args [] : String)
-}
-
 Labyrinthe --> Perso : pj "1"
 Labyrinthe "1" <-- LabyJeu : laby
 
-MainLaby ---> Labyrinthe : laby "1"
-MainLaby --> LabyJeu : jeu "1"
-MainLaby ---> LabyDessin : dessin "1"
 @enduml
