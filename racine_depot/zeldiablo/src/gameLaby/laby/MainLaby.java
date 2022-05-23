@@ -2,13 +2,15 @@ package gameLaby.laby;
 
 import moteurJeu.MoteurJeu;
 
+import java.io.IOException;
+
 /**
  * lance un jeu de type labyrinthe
  */
 
 public class MainLaby {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         /**
          * A voir si besoin de parametrage
@@ -27,7 +29,8 @@ public class MainLaby {
          */
 
         // creation des objets
-        LabyJeu jeu = new LabyJeu();
+        Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
+        LabyJeu jeu = new LabyJeu(laby);
         LabyDessin dessin = new LabyDessin();
 
         // lancement du jeu
