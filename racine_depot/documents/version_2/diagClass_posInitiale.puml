@@ -4,6 +4,7 @@ title Position et affichage avec un monstre
 class Labyrinthe {
     + <static> MUR : char {static}
     + <static> PJ : char {static}
+    + <static> MONSTRE : char {static}
     + <static> VIDE : char {static}
     + <static> HAUT : String {static}
     + <static> BAS : String {static}
