@@ -18,7 +18,7 @@ public class LabyDessin implements DessinJeu {
 
         Labyrinthe labyrinthe = labyJeu.getLaby();
 
-        for (int i = 0; i < labyrinthe.getLength(); i++) {
+        for (int i = 0; i < labyrinthe.getLengthX(); i++) {
             // column = i = x
 
             for (int j = 0; j < labyrinthe.getLengthY(); j++) {

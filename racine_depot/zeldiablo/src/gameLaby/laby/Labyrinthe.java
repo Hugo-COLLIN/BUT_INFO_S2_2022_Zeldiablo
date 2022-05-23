@@ -16,6 +16,8 @@ public class Labyrinthe {
      */
     public static final char MUR = 'X';
     public static final char PJ = 'P';
+    public static final char MONSTRE = 'M';
+
     public static final char VIDE = '.';
 
     /**
@@ -29,7 +31,9 @@ public class Labyrinthe {
     /**
      * attribut du personnage
      */
-    public Perso pj;
+    public Position pj;
+
+    public Position monstre;
 
     /**
      * les murs du labyrinthe
@@ -114,7 +118,11 @@ public class Labyrinthe {
                         // pas de mur
                         this.murs[colonne][numeroLigne] = false;
                         // ajoute PJ
-                        this.pj = new Perso(colonne, numeroLigne);
+                        this.pj = new Position(colonne, numeroLigne);
+                        break;
+                    case MONSTRE:
+                        this.murs[colonne][numeroLigne] = false;
+                        this.monstre = new Position(colonne, numeroLigne);
                         break;
 
                     default:
@@ -138,7 +146,7 @@ public class Labyrinthe {
      *
      * @param action une des actions possibles
      */
-    public void deplacerPerso(String action) {
+    public void deplacerPosition(String action) {
         // case courante
         int[] courante = {this.pj.x, this.pj.y};
 
@@ -181,7 +189,7 @@ public class Labyrinthe {
      *
      * @return
      */
-    public int getLength() {
+    public int getLengthX() {
         return murs.length;
     }
 
