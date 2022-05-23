@@ -11,14 +11,14 @@ class Perso {
 }
 
 class Labyrinthe {
-    + MUR : char {static}
-    + PJ : char {static}
-    + VIDE : char {static}
-    + HAUT : String {static}
-    + BAS : String {static}
-    + GAUCHE : String {static}
-    + DROITE : String {static}
-    + murs : boolean
+    + <static> MUR : char {static}
+    + <static> PJ : char {static}
+    + <static> VIDE : char {static}
+    + <static> HAUT : String {static}
+    + <static> BAS : String {static}
+    + <static> GAUCHE : String {static}
+    + <static> DROITE : String {static}
+    + <static> murs : boolean
 
     + Labyrinthe (nom : String)
     + getSuivant (x : int, y : int, action : String) : int []
@@ -38,7 +38,7 @@ class LabyJeu {
 }
 
 class LabyDessin {
-    - TAILLE_CASE : int {static}
+    - <static> TAILLE_CASE : int {static}
     + dessinerJeu (jeu : Jeu, canvas : Canvas)
 }
 
