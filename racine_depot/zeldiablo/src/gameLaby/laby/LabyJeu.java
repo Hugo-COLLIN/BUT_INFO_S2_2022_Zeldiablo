@@ -20,8 +20,15 @@ public class LabyJeu implements Jeu
      */
     public void update(double secondes, Clavier clavier) {
         // deplace le personnage en fonction des touches
-        if (clavier.droite || clavier.gauche || clavier.haut || clavier.bas)
-            this.laby.deplacerPerso(clavier.toString());
+        if (clavier.haut)
+            this.laby.deplacerPerso("HAUT");
+        else if (clavier.bas)
+            this.laby.deplacerPerso("BAS");
+        else if (clavier.gauche)
+            this.laby.deplacerPerso("GAUCHE");
+        else if (clavier.droite)
+            this.laby.deplacerPerso("DROITE");
+        
     }
 
     @Override
