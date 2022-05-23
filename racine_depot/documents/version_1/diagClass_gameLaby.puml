@@ -1,5 +1,5 @@
 @startuml
-
+title Jeu labyrinthe version 1
 class Perso {
     x : int
     y : int

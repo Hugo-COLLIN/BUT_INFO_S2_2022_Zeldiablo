@@ -1,4 +1,5 @@
 @startuml
+title Position et affichage du monstre
 
 class Perso {
     x : int
