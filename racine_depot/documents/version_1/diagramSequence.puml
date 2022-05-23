@@ -1,0 +1,36 @@
+@startuml
+
+title deplacement sur la gauche
+participant "moteur : MoteurJeu" as moteur
+participant "dessin : LabyDessin" as dessin
+participant "jeu : LabyJeu" as jeu
+participant "laby : Labyrinthe" as laby
+participant "clavier : Clavier" as clavier
+actor joueur
+activate joueur
+
+    loop Timer
+        joueur -> clavier : appuyerTouche(q)
+        activate clavier
+        joueur <-- clavier
+        deactivate clavier
+
+        moteur -> jeu : update(dureeEnSecondes, clavier)
+        activate jeu
+            jeu -> laby : deplacerPerso(GAUCHE)
+            activate laby
+            jeu <-- laby
+            deactivate laby
+        moteur <-- jeu
+        deactivate jeu
+
+        moteur -> dessin : dessinerJeu(jeu, canvas)
+        activate dessin
+        moteur <-- dessin
+        deactivate dessin
+
+    end
+
+
+deactivate joueur
+@enduml
