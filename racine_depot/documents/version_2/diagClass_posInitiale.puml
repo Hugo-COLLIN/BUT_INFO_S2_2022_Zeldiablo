@@ -1,27 +1,59 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Perso {
+    x : int
+    y : int
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+    + Perso (dx : int, dy : int)
+    + etrePresent (dx : int, dy : int) : boolean
+    + getX()
+    + getY()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Labyrinthe {
+    + <static> MUR : char {static}
+    + <static> PJ : char {static}
+    + <static> VIDE : char {static}
+    + <static> HAUT : String {static}
+    + <static> BAS : String {static}
+    + <static> GAUCHE : String {static}
+    + <static> DROITE : String {static}
+    + murs : boolean
+
+    + Labyrinthe (nom : String)
+    + getSuivant (x : int, y : int, action : String) : int []
+    + deplacerPerso (action : String)
+    + etreFini () : boolean
+    + getLengthY () : int
+    + getLengthX () : int
+    + getMur (x : int, y : int) : boolean
 }
+
+class LabyJeu {
+    + LabyJeu(labyP : Labyrinthe)
+    + update(secondes : double, clavier : Clavier)
+    + init()
+    + etreFini() : boolean
+    + getLaby() : Labyrinthe
+}
+
+class LabyDessin {
+    - <static> TAILLE_CASE : int {static}
+    + dessinerJeu (jeu : Jeu, canvas : Canvas)
+}
+
+class Monstre {
+    + x : int
+    + y : int
+
+    + Monstre (dx : int, dy : int)
+    + etrePresent (dx : int, dy : int) : boolean
+    + getX()
+    + getY()
+}
+
+Labyrinthe --> Perso : pj "1"
+Labyrinthe --> Monstre : monstre "1"
+Labyrinthe "1" <--- LabyJeu : laby
 
 @enduml
