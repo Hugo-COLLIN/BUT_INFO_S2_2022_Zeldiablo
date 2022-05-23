@@ -18,7 +18,7 @@ class Labyrinthe {
     + <static> BAS : String {static}
     + <static> GAUCHE : String {static}
     + <static> DROITE : String {static}
-    + <static> murs : boolean
+    + murs : boolean
 
     + Labyrinthe (nom : String)
     + getSuivant (x : int, y : int, action : String) : int []
