@@ -1,27 +1,33 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Perso {
+    x : int
+    y : int
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+    + Perso (dx : int, dy : int)
+    + etrePresent (dx : int, dy : int) : boolean
+    + getX()
+    + getY()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+class Labyrinthe {
+    + MUR : char {static}
+    + PJ : char {static}
+    + VIDE : char {static}
+    + HAUT : String {static}
+    + BAS : String {static}
+    + GAUCHE : String {static}
+    + DROITE : String {static}
+    + murs : boolean
 
+    + Labyrinthe (nom : String)
+    + getSuivant (x : int, y : int, action : String) : int []
+    + deplacerPerso (action : String)
+    + etreFini () : boolean
+    + getLengthY () : int
+    + getLengthX () : int
+    + getMur (x : int, y : int) : boolean
+}
+Labyrinthe -> Perso : pj "1"
+class LabyJeu {
 @enduml
