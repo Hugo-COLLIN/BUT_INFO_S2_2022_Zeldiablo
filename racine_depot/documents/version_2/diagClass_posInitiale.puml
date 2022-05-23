@@ -1,15 +1,5 @@
 @startuml
-title Position et affichage du monstre
-
-class Perso {
-    x : int
-    y : int
-
-    + Perso (dx : int, dy : int)
-    + etrePresent (dx : int, dy : int) : boolean
-    + getX()
-    + getY()
-}
+title Position et affichage avec un monstre
 
 class Labyrinthe {
     + <static> MUR : char {static}
@@ -23,7 +13,7 @@ class Labyrinthe {
 
     + Labyrinthe (nom : String)
     + getSuivant (x : int, y : int, action : String) : int []
-    + deplacerPerso (action : String)
+    + deplacerPosition (action : String)
     + etreFini () : boolean
     + getLengthY () : int
     + getLengthX () : int
@@ -43,18 +33,17 @@ class LabyDessin {
     + dessinerJeu (jeu : Jeu, canvas : Canvas)
 }
 
-class Monstre {
+class Position {
     + x : int
     + y : int
 
-    + Monstre (dx : int, dy : int)
+    + Position (dx : int, dy : int)
     + etrePresent (dx : int, dy : int) : boolean
     + getX()
     + getY()
 }
 
-Labyrinthe --> Perso : pj "1"
-Labyrinthe --> Monstre : monstre "1"
-Labyrinthe "1" <--- LabyJeu : laby
+Labyrinthe --> Position : pos "1"
+Labyrinthe "1" <-- LabyJeu : laby
 
 @enduml
