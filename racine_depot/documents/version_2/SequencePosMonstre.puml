@@ -1,0 +1,25 @@
+@startuml
+title Donner une position à un monstre à partir d'un fichier
+participant "laby : Labyrinthe" as laby
+participant "ligne : String" as ligne
+participant "c : char" as c
+
+-> laby : new Labyrinthe(file_name)
+activate laby
+    loop ligne != null
+        loop o <= colonne < ligne.lenghth
+            laby -> ligne : charAt(colonne)
+            activate ligne
+            laby <-- ligne : c : char
+            deactivate ligne
+
+            alt c = M
+                create monstre
+                laby -> monstre : new Monstre (numeroLigne, colonne)
+            end
+        end
+    end
+
+<-- laby
+deactivate laby
+@enduml
