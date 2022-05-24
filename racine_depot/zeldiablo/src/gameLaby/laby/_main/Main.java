@@ -25,5 +25,6 @@ public class Main {
             // saut de ligne
             System.out.println();
         }
+        System.out.println(laby);
     }
 }
