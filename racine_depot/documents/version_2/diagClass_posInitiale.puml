@@ -44,7 +44,18 @@ class Position {
     + getY()
 }
 
+class Personnage {
+    + Personnage (dx : int, dy : int)
+}
+
+class Monstre {
+    + Monstre (dx : int, dy : int)
+}
+
 Labyrinthe --> Position : pos "1"
 Labyrinthe "1" <-- LabyJeu : laby
+
+Monstre -|> Position
+Personnage -|> Position
 
 @enduml
