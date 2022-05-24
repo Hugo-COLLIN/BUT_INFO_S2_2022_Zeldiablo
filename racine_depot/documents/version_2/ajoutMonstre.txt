@@ -1,0 +1,12 @@
+Le monstre devra avoir les memes attributs que le personnage
+ 
+c'est à dire qu'il possedera une position et par conséquent 
+des attributs int x, et y
+
+il devra donc etre afficher et devra pouvoir se deplacer
+dans le labyrinthe et ne pas pouvoir etre dans un mur
+
+les criteres de validation seront donc :
+une position initiale valide 
+un affichage 
+et une capacité de deplacement valide
