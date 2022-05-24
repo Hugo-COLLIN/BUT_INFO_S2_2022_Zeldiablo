@@ -8,10 +8,21 @@ import javafx.scene.paint.Color;
 import moteurJeu.DessinJeu;
 import moteurJeu.Jeu;
 
+/**
+ * Vue graphique permettant de créer l'IHM a partir du modele
+ */
 public class LabyDessin implements DessinJeu {
 
+    /**
+     * Taille d'une case
+     */
     private static final int TAILLE_CASE = 50;
 
+    /**
+     * Cree l'interface graphique a partir du modele
+     * @param jeu jeu a afficher
+     * @param canvas canvas dans lequel dessiner l'etat du jeu
+     */
     @Override
     public void dessinerJeu(Jeu jeu, Canvas canvas) {
         LabyJeu labyJeu = (LabyJeu) jeu;
