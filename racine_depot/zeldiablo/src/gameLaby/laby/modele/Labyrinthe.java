@@ -194,7 +194,12 @@ public class Labyrinthe {
     }
 
     /**
+<<<<<<< HEAD
      * Retourne l'etat d'un mur
+=======
+     * return mur en (i,j)
+     *
+>>>>>>> 98f898d9c31e95a9537bd276b974460dfad918f4
      * @param x
      * @param y
      * @return mur en (i,j)
@@ -202,5 +207,29 @@ public class Labyrinthe {
     public boolean getMur(int x, int y) {
         // utilise le tableau de boolean
         return this.murs[x][y];
+    }
+
+    public Monstre getMonstre() {
+        return this.monstre;
+    }
+
+    public String toString() {
+        String S = "";
+        for (int y = 0; y < this.getLengthY(); y++) {
+            // affiche la ligne
+            for (int x = 0; x < this.getLengthX(); x++) {
+                if (this.getMur(x, y))
+                    S += 'X';
+                else if (this.monstre != null && this.monstre.etrePresent(x,y)) {
+                    S += 'M';
+                } else if (this.pj.etrePresent(x, y)) {
+                    S += 'P';
+                } else {
+                    S += '.';
+                }
+            }
+            S+='\n';
+        }
+        return S;
     }
 }
