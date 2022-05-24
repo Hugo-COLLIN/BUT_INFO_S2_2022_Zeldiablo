@@ -4,12 +4,18 @@ import gameLaby.laby.modele.Labyrinthe;
 import moteurJeu.Clavier;
 import moteurJeu.Jeu;
 
+/**
+ * Implémentation du moteur de jeu pour notre jeu labyrinthe
+ */
 public class LabyJeu implements Jeu
 {
+    /**
+     * Objet labyrinthe
+     */
     Labyrinthe laby;
 
     /**
-     * constructeur par defaut
+     * Constructeur par defaut
      */
     public LabyJeu (Labyrinthe labyP)
     {
@@ -17,7 +23,7 @@ public class LabyJeu implements Jeu
     }
 
     /**
-     * met a jour l'etat du jeu
+     * Met a jour l'etat du jeu
      */
     public void update(double secondes, Clavier clavier) {
         // deplace le personnage en fonction des touches
@@ -32,11 +38,18 @@ public class LabyJeu implements Jeu
         
     }
 
+    /**
+     * Methode heritee du moteur de jeu, aucune initialisation particuliere
+     */
     @Override
     public void init() {
         // pas d'initialisation particuliere
     }
 
+    /**
+     * Methode heritee du moteur de jeu, le jeu ne finit jamais
+     * @return faux car le jeu ne s'arrete jamais
+     */
     @Override
     public boolean etreFini() {
         // le jeu ne s'arrete jamais
@@ -44,7 +57,10 @@ public class LabyJeu implements Jeu
     }
 
     // >Getter
-
+    /**
+     * Getter de laby
+     * @return this.laby de type Labyrinthe
+     */
     public Labyrinthe getLaby() {
         return this.laby;
     }
