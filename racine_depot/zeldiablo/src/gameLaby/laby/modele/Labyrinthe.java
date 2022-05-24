@@ -30,12 +30,13 @@ public class Labyrinthe {
     /**
      * Attribut du personnage
      */
-    public Personnage pj;
+    private Personnage pj;
+
 
     /**
      * Attribut du monstre
      */
-    public Monstre monstre;
+    private Monstre monstre;
 
     /**
      * Les murs du labyrinthe
@@ -194,12 +195,8 @@ public class Labyrinthe {
     }
 
     /**
-<<<<<<< HEAD
      * Retourne l'etat d'un mur
-=======
      * return mur en (i,j)
-     *
->>>>>>> 98f898d9c31e95a9537bd276b974460dfad918f4
      * @param x
      * @param y
      * @return mur en (i,j)
@@ -213,19 +210,23 @@ public class Labyrinthe {
         return this.monstre;
     }
 
+    public Personnage getPj(){
+        return this.pj;
+    }
+
     public String toString() {
         String S = "";
         for (int y = 0; y < this.getLengthY(); y++) {
             // affiche la ligne
             for (int x = 0; x < this.getLengthX(); x++) {
                 if (this.getMur(x, y))
-                    S += 'X';
+                    S += MUR;
                 else if (this.monstre != null && this.monstre.etrePresent(x,y)) {
-                    S += 'M';
+                    S +=MONSTRE;
                 } else if (this.pj.etrePresent(x, y)) {
-                    S += 'P';
+                    S += PJ;
                 } else {
-                    S += '.';
+                    S += VIDE;
                 }
             }
             S+='\n';

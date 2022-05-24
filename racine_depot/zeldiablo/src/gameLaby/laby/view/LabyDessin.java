@@ -38,10 +38,10 @@ public class LabyDessin implements DessinJeu {
                 if (labyrinthe.getMur(i, j)) {
                     gc.setFill(Color.BLACK);
                     gc.fillRect(i * TAILLE_CASE, j * TAILLE_CASE, TAILLE_CASE, TAILLE_CASE);
-                } else if (labyrinthe.pj.etrePresent(i,j)) {
+                } else if (labyrinthe.getPj().etrePresent(i,j)) {
                     gc.setFill(Color.RED);
                     gc.fillOval(i * TAILLE_CASE, j * TAILLE_CASE, TAILLE_CASE, TAILLE_CASE);
-                } else if (labyrinthe.monstre != null && labyrinthe.getMonstre().etrePresent(i,j)) {
+                } else if (labyrinthe.getMonstre() != null && labyrinthe.getMonstre().etrePresent(i,j)) {
                     gc.setFill(Color.VIOLET);
                     gc.fillOval(i * TAILLE_CASE, j * TAILLE_CASE, TAILLE_CASE, TAILLE_CASE);
                 } else {
