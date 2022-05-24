@@ -207,7 +207,7 @@ public class Labyrinthe {
     }
 
     public Monstre getMonstre() {
-        return this.monstre;
+            return this.monstre;
     }
 
     public Personnage getPj(){
