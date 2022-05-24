@@ -7,12 +7,12 @@ package gameLaby.laby.modele;
 public class Position {
 
     /**
-     * position du personnage
+     * Position du personnage
      */
     int x, y;
 
     /**
-     * constructeur
+     * Constructeur avec coordonnees
      *
      * @param dx position selon x
      * @param dy position selon y
@@ -23,7 +23,7 @@ public class Position {
     }
 
     /**
-     * permet de savoir si le personnage est en x,y
+     * Permet de savoir si le personnage est en x,y
      *
      * @param dx position testee
      * @param dy position testee

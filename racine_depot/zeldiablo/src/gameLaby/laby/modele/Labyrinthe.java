@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * classe labyrinthe. represente un labyrinthe avec
+ * Classe labyrinthe. Represente un labyrinthe avec
  * <ul> des murs </ul>
  * <ul> un personnage (x,y) </ul>
  */
@@ -20,7 +20,7 @@ public class Labyrinthe {
     public static final char VIDE = '.';
 
     /**
-     * constantes actions possibles
+     * Constantes actions possibles
      */
     public static final String HAUT = "Haut";
     public static final String BAS = "Bas";
@@ -28,19 +28,22 @@ public class Labyrinthe {
     public static final String DROITE = "Droite";
 
     /**
-     * attribut du personnage
+     * Attribut du personnage
      */
     public Personnage pj;
 
+    /**
+     * Attribut du monstre
+     */
     public Monstre monstre;
 
     /**
-     * les murs du labyrinthe
+     * Les murs du labyrinthe
      */
     public boolean[][] murs;
 
     /**
-     * retourne la case suivante selon une actions
+     * Retourne la case suivante selon une actions
      *
      * @param x      case depart
      * @param y      case depart
@@ -73,7 +76,7 @@ public class Labyrinthe {
     }
 
     /**
-     * charge le labyrinthe
+     * Charge le labyrinthe
      *
      * @param nom nom du fichier de labyrinthe
      * @return labyrinthe cree
@@ -140,8 +143,8 @@ public class Labyrinthe {
 
 
     /**
-     * deplace le personnage en fonction de l'action.
-     * gere la collision avec les murs
+     * Deplace le personnage en fonction de l'action.
+     * Gere la collision avec les murs
      *
      * @param action une des actions possibles
      */
@@ -162,7 +165,7 @@ public class Labyrinthe {
 
 
     /**
-     * jamais fini
+     * Le jeu n'est jamais fini
      *
      * @return fin du jeu
      */
@@ -175,28 +178,26 @@ public class Labyrinthe {
     // ##################################
 
     /**
-     * return taille selon Y
-     *
-     * @return
+     * Getter de Y
+     * @return taille selon Y
      */
     public int getLengthY() {
         return murs[0].length;
     }
 
     /**
-     * return taille selon X
-     *
-     * @return
+     * Getter de X
+     * @return taille selon X
      */
     public int getLengthX() {
         return murs.length;
     }
 
     /**
-     * return mur en (i,j)
+     * Retourne l'etat d'un mur
      * @param x
      * @param y
-     * @return
+     * @return mur en (i,j)
      */
     public boolean getMur(int x, int y) {
         // utilise le tableau de boolean

@@ -2,7 +2,7 @@ package gameLaby.laby.modele;
 
 public class Personnage extends Position {
     /**
-     * constructeur
+     * Constructeur avec coordonnees
      *
      * @param dx position selon x
      * @param dy position selon y
