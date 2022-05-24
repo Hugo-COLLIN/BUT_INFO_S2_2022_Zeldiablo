@@ -1,5 +1,7 @@
-package gameLaby.laby;
+package gameLaby.laby.view;
 
+import gameLaby.laby.controller.LabyJeu;
+import gameLaby.laby.modele.Labyrinthe;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

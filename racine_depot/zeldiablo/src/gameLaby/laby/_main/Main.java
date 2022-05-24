@@ -1,4 +1,6 @@
-package gameLaby.laby;
+package gameLaby.laby._main;
+
+import gameLaby.laby.modele.Labyrinthe;
 
 import java.io.IOException;
 

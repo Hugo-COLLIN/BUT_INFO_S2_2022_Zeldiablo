@@ -1,5 +1,6 @@
-package gameLaby.laby;
+package gameLaby.laby.controller;
 
+import gameLaby.laby.modele.Labyrinthe;
 import moteurJeu.Clavier;
 import moteurJeu.Jeu;
 

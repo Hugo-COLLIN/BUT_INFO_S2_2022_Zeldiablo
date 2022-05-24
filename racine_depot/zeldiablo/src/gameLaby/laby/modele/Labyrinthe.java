@@ -1,4 +1,4 @@
-package gameLaby.laby;
+package gameLaby.laby.modele;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

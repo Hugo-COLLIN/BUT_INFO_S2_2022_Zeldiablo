@@ -1,5 +1,8 @@
-package gameLaby.laby;
+package gameLaby.laby._main;
 
+import gameLaby.laby.controller.LabyJeu;
+import gameLaby.laby.modele.Labyrinthe;
+import gameLaby.laby.view.LabyDessin;
 import moteurJeu.MoteurJeu;
 
 import java.io.IOException;
