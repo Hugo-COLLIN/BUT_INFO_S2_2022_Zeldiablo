@@ -1,7 +1,5 @@
 package gameLaby.laby.modele;
 
-import gameLaby.laby.Position;
-
 public class Personnage extends Position {
     /**
      * constructeur

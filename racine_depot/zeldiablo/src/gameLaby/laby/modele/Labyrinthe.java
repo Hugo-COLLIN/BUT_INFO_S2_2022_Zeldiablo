@@ -30,9 +30,9 @@ public class Labyrinthe {
     /**
      * attribut du personnage
      */
-    public Position pj;
+    public Personnage pj;
 
-    public Position monstre;
+    public Monstre monstre;
 
     /**
      * les murs du labyrinthe
@@ -117,11 +117,11 @@ public class Labyrinthe {
                         // pas de mur
                         this.murs[colonne][numeroLigne] = false;
                         // ajoute PJ
-                        this.pj = new Position(colonne, numeroLigne);
+                        this.pj = new Personnage(colonne, numeroLigne);
                         break;
                     case MONSTRE:
                         this.murs[colonne][numeroLigne] = false;
-                        this.monstre = new Position(colonne, numeroLigne);
+                        this.monstre = new Monstre(colonne, numeroLigne);
                         break;
 
                     default:
