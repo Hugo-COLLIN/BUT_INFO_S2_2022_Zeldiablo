@@ -10,7 +10,7 @@ class PositionTest {
     Position pos;
     int x, y;
 
-    /*
+    /**
     Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
      */
     @BeforeEach
@@ -21,7 +21,7 @@ class PositionTest {
         pos = new Position(x,y);
     }
 
-    /*
+    /**
     Test des methodes getX et getY de la classe Position
      */
     @Test
@@ -36,7 +36,7 @@ class PositionTest {
         assertEquals(resY, 1, "Les valeurs doivent etre egales");
     }
 
-    /*
+    /**
     Test de la methode etrePresent de la classe Position (cas Present)
      */
     @Test
@@ -49,7 +49,7 @@ class PositionTest {
         assertTrue(res, "Le resultat doit etre vrai");
     }
 
-    /*
+    /**
     Test de la methode etrePresent de la classe Position (cas non present)
     */
     @Test
@@ -62,7 +62,7 @@ class PositionTest {
         assertFalse(res, "Le resultat doit etre faux");
     }
 
-    /*
+    /**
     Test de la methode etrePresent de la classe Position (cas non present avec d autres valeurs)
     */
     @Test
@@ -75,7 +75,7 @@ class PositionTest {
         assertFalse(res, "Le resultat doit etre faux");
     }
 
-    /*
+    /**
     Test de la methode distance_entre de la classe Position
      */
     @Test
