@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * Classe de test de la classe Position
+ */
 class PositionTest {
     Position pos;
     int x, y;
