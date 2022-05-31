@@ -60,14 +60,6 @@ class LabyJeuTest
             laby.deplacerPosition(Labyrinthe.HAUT);
         for(int i=0; i<10; i++)
             laby.deplacerPosition(Labyrinthe.GAUCHE);
-        for(int i=0; i<10; i++)
-            laby.deplacerPosition(Labyrinthe.BAS);
-        for(int i=0; i<10; i++)
-            laby.deplacerPosition(Labyrinthe.DROITE);
-        for(int i=0; i<10; i++)
-            laby.deplacerPosition(Labyrinthe.HAUT);
-        for(int i=0; i<10; i++)
-            laby.deplacerPosition(Labyrinthe.DROITE);
 
         // Recuperation des valeurs
         int Px=laby.getPj().getX();
@@ -80,7 +72,7 @@ class LabyJeuTest
         //Hypothese2:(30%):autre chose
 
         // Test sur la position
-        assertEquals(3, Px);
-        assertEquals(3,Py);
+        assertEquals(5, Px);
+        assertEquals(1,Py);
     }
 }
