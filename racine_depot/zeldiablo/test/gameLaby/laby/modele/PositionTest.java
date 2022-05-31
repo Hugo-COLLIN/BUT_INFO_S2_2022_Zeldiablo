@@ -10,6 +10,9 @@ class PositionTest {
     Position pos;
     int x, y;
 
+    /*
+    Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
+     */
     @BeforeEach
     void beforeEach()
     {
@@ -18,48 +21,63 @@ class PositionTest {
         pos = new Position(x,y);
     }
 
+    /*
+    Test des methodes getX et getY de la classe Position
+     */
     @Test
     void test_getters_XY ()
     {
-        //Appel methodes
+        // Appel des methodes
         int resX = pos.getX();
         int resY = pos.getY();
 
-        //Test
-        assertEquals(resX, 2, "doivent etre egaux");
-        assertEquals(resY, 1, "doivent etre egaux");
+        // Test si les valeurs obtenues par les methodes correspondent a celles attendues
+        assertEquals(resX, 2, "Les valeurs doivent etre egales");
+        assertEquals(resY, 1, "Les valeurs doivent etre egales");
     }
 
+    /*
+    Test de la methode etrePresent de la classe Position (cas Present)
+     */
     @Test
     void test_etrePresent_present()
     {
-        //Appel methode
+        // Appel de la methode
         boolean res = pos.etrePresent(2, 1);
 
-        //Test
-        assertTrue(res, "doit etre vrai");
+        // Test si la position est bien presente a ces coordonnees donnees en parametre
+        assertTrue(res, "Le resultat doit etre vrai");
     }
 
+    /*
+    Test de la methode etrePresent de la classe Position (cas non present)
+    */
     @Test
     void test_etrePresent_pasPresent1Att()
     {
-        //Appel methode
+        // Appel de la methode
         boolean res = pos.etrePresent(2, 3);
 
-        //Test
-        assertFalse(res, "doit etre faux");
+        // Test si la position n'est bien pas presente aux coordonnes donnees en parametre
+        assertFalse(res, "Le resultat doit etre faux");
     }
 
+    /*
+    Test de la methode etrePresent de la classe Position (cas non present avec d autres valeurs)
+    */
     @Test
     void test_etrePresent_pasPresent2Att()
     {
-        //Appel methode
+        // Appel de la methode
         boolean res = pos.etrePresent(8, 5);
 
-        //Test
-        assertFalse(res, "doit etre faux");
+        // Test si la position n'est bien pas presente aux coordonnes donnees en parametre
+        assertFalse(res, "Le resultat doit etre faux");
     }
 
+    /*
+    Test de la methode distance_entre de la classe Position
+     */
     @Test
     void distance_entre(){
         // construction position
