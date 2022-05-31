@@ -14,7 +14,7 @@ public class Monstre extends Position {
     }
 
     public Position etreAttire(Personnage p, String action) {
-        int distanceInitiale = this.distanceEntre(p);
+        double distanceInitiale = this.distanceEntre(p);
         int prochainX = this.x;
         int prochainY = this.y;
         switch (action) {
@@ -36,17 +36,22 @@ public class Monstre extends Position {
                 break;
         }
         Position futurPos = new Position(prochainX, prochainY);
-        int distanceApresDeplacement = futurPos.distanceEntre(p);
+        double distanceApresDeplacement = futurPos.distanceEntre(p);
 //        System.out.println("Distance initiale: " + distanceInitiale);
 //        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
-
+//
         if (distanceInitiale < distanceApresDeplacement) {
             if (this.x - futurPos.getX() == 1) futurPos.x += 2;
             else if (this.x - futurPos.getX() == -1) futurPos.x -= 2;
             else if (this.y - futurPos.getY() == 1) futurPos.y += 2;
             else if (this.y - futurPos.getY() == -1) futurPos.y -= 2;
-        }
 
+            distanceApresDeplacement = futurPos.distanceEntre(p);
+            if (distanceInitiale < distanceApresDeplacement) {
+                futurPos.x = this.x;
+                futurPos.y = this.y;
+            }
+        }
         return futurPos;
     }
 }
