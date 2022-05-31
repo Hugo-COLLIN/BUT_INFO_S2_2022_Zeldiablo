@@ -1,5 +1,5 @@
 @startuml
-title Position et affichage avec un monstre
+title Collision avec le héros et attiré par le héros
 
 class Labyrinthe {
     + <static> MUR : char {static}
@@ -12,13 +12,13 @@ class Labyrinthe {
     + <static> DROITE : String {static}
     + murs : boolean
 
-    + Labyrinthe (nom : String)
-    + getSuivant (x : int, y : int, action : String) : int []
-    + deplacerPosition (action : String)
-    + etreFini () : boolean
-    + getLengthY () : int
-    + getLengthX () : int
-    + getMur (x : int, y : int) : boolean
+    + Labyrinthe(nom : String)
+    + getSuivant(x : int, y : int, action : String) : int []
+    + deplacerPosition(action : String)
+    + etreFini() : boolean
+    + getLengthY() : int
+    + getLengthX() : int
+    + getMur(x : int, y : int) : boolean
 }
 
 class LabyJeu {
@@ -38,18 +38,19 @@ class Position {
     + x : int
     + y : int
 
-    + Position (dx : int, dy : int)
-    + etrePresent (dx : int, dy : int) : boolean
+    + Position(dx : int, dy : int)
+    + etrePresent(dx : int, dy : int) : boolean
     + getX()
     + getY()
 }
 
 class Personnage {
-    + Personnage (dx : int, dy : int)
+    + Personnage(dx : int, dy : int)
 }
 
 class Monstre {
-    + Monstre (dx : int, dy : int)
+    + Monstre(dx : int, dy : int)
+    + etreAttire(p : Personnage)
 }
 
 Labyrinthe --> Position : pos "1"
