@@ -7,26 +7,30 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LabyJeuTest {
-    /*
-    Test si la position initiale du monstre
+class LabyJeuTest
+{
+    /**
+     * Teste si la position initiale du monstre
      */
     @Test
     public void test_Monstre_posInit() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
-        assertEquals(laby.getMonstre().etrePresent(4, 3), true);
+        assertTrue(laby.getMonstre().etrePresent(4, 3), "le personnage doit etre present dans le labyrinthe");
     }
 
-    /*
-    Test labsence du monstre(il est nulle)
+    /**
+     * Test l'absence du monstre (il vaut null)
      */
     @Test
     public void test_Monstre_posInit_Absent() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby0.txt");
         assertNull(laby.getMonstre());
     }
-    
 
+
+    /**
+     * Teste que la méthode toString de Monstre fonctionne correctement
+     */
     @Test
     public void test_Monstre_toString() throws IOException {
         String laby0="XXXXXXX\n" +
@@ -40,6 +44,9 @@ class LabyJeuTest {
         }
     }
 
+    /**
+     * Teste le deplacement d'un monstre qui est contre un mur.
+     */
     @Test
     public void test_Monstre_Collision() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
