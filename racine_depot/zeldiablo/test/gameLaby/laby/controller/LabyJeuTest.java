@@ -25,12 +25,7 @@ class LabyJeuTest {
         Labyrinthe laby = new Labyrinthe("labySimple/laby0.txt");
         assertNull(laby.getMonstre());
     }
-
-    @Test
-    public void test_Monstre_sur_Perso() {
-        //TODO quand le personnage va pouvoir se deplacer ...bref à voir plus tard
-        throw (new Error());
-    }
+    
 
     @Test
     public void test_Monstre_toString() throws IOException {
