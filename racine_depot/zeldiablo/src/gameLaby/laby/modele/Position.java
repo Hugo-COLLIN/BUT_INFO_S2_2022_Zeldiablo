@@ -53,4 +53,11 @@ public class Position {
         //getter
         return this.y;
     }
+
+    public int distanceEntre(int i, int i1) {
+        int distanceX = i - x;
+        int distanceY = i1 - y;
+        int sommeCarree = (int) (Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+        return (int) Math.round(Math.sqrt(sommeCarree));
+    }
 }

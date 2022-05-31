@@ -63,10 +63,11 @@ class PositionTest {
     @Test
     void distance_entre(){
         // construction position
-        Position p1=new Position(2, 3);
+        Position p1=new Position(4, 3);
+        Position p2= new Position(0, 0);
         // appel methode
-        int dist=p1.distanceEntre(4,1);
+        int dist=p2.distanceEntre(p1.getX(), p1.getY());
         // test
-        assertEquals(dist, 5, "La distance doit etre egale a 5");
+        assertEquals(5, dist, "La distance doit etre egale a 5");
     }
 }
