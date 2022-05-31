@@ -1,0 +1,33 @@
+@startuml
+title:"DeplacerPosition(int dx,int dy,String action) :collision"
+
+participant labyrinthe
+participant personnage
+participant monstre
+
+
+->labyrinthe:deplacerPosition(Direction d)
+activate labyrinthe
+
+labyrinthe->labyrinthe:getSuivant(int dx,int dy,String action)
+activate labyrinthe
+labyrinthe-->labyrinthe:int[]
+deactivate labyrinthe
+
+
+labyrinthe->monstre:etrePresent(int dxg,int dyg)
+
+activate monstre
+labyrinthe<--monstre:boolean
+deactivate monstre
+alt boolean=true
+
+else boolean=false
+labyrinthe->personnage:setPosition(String action)
+activate personnage
+labyrinthe<--personnage
+deactivate personnage
+end
+<--labyrinthe
+deactivate labyrinthe
+@enduml

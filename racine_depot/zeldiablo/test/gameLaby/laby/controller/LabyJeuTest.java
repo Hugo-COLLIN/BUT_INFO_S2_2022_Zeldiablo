@@ -44,4 +44,28 @@ class LabyJeuTest {
             assertEquals(laby.toString().charAt(i),laby0.charAt(i));
         }
     }
+
+    @Test
+    public void test_Monstre_Collision() throws IOException {
+        Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
+        laby.deplacerPosition(Labyrinthe.HAUT);
+        laby.deplacerPosition(Labyrinthe.GAUCHE);
+        laby.deplacerPosition(Labyrinthe.BAS);
+        laby.deplacerPosition(Labyrinthe.DROITE);
+        laby.deplacerPosition(Labyrinthe.HAUT);
+        laby.deplacerPosition(Labyrinthe.DROITE);
+        int Px=laby.getPj().getX();
+        int Py=laby.getPj().getY();
+        int Mx=laby.getMonstre().getX();
+        int My=laby.getMonstre().getY();
+        //le personnage vient par la gauche
+        //On a un soucis avec le modele :il faut un while dans deplacer position
+        //pour le soucis nest pas sur la view
+
+        //Hypoyhese principale(70%): quelquun a modifié le view au lieu dagir sur le modèle
+        //Hypothese2:(30%):autre chose
+
+        assertEquals(Px+1,Mx);
+        assertEquals(Py,My);
+    }
 }

@@ -155,9 +155,9 @@ public class Labyrinthe {
 
         // calcule case suivante
         int[] suivante = getSuivant(courante[0], courante[1], action);
-
+        boolean monstre_est_la = this.monstre.etrePresent(suivante[0], suivante[1]);
         // si c'est pas un mur, on effectue le deplacement
-        if (!this.murs[suivante[0]][suivante[1]]) {
+        if (!this.murs[suivante[0]][suivante[1]] && !monstre_est_la) {
             // on met a jour personnage
             this.pj.x = suivante[0];
             this.pj.y = suivante[1];
@@ -180,6 +180,7 @@ public class Labyrinthe {
 
     /**
      * Getter de Y
+     *
      * @return taille selon Y
      */
     public int getLengthY() {
@@ -188,6 +189,7 @@ public class Labyrinthe {
 
     /**
      * Getter de X
+     *
      * @return taille selon X
      */
     public int getLengthX() {
@@ -197,6 +199,7 @@ public class Labyrinthe {
     /**
      * Retourne l'etat d'un mur
      * return mur en (i,j)
+     *
      * @param x
      * @param y
      * @return mur en (i,j)
@@ -207,10 +210,10 @@ public class Labyrinthe {
     }
 
     public Monstre getMonstre() {
-            return this.monstre;
+        return this.monstre;
     }
 
-    public Personnage getPj(){
+    public Personnage getPj() {
         return this.pj;
     }
 
@@ -221,15 +224,15 @@ public class Labyrinthe {
             for (int x = 0; x < this.getLengthX(); x++) {
                 if (this.getMur(x, y))
                     S += MUR;
-                else if (this.monstre != null && this.monstre.etrePresent(x,y)) {
-                    S +=MONSTRE;
+                else if (this.monstre != null && this.monstre.etrePresent(x, y)) {
+                    S += MONSTRE;
                 } else if (this.pj.etrePresent(x, y)) {
                     S += PJ;
                 } else {
                     S += VIDE;
                 }
             }
-            S+='\n';
+            S += '\n';
         }
         return S;
     }
