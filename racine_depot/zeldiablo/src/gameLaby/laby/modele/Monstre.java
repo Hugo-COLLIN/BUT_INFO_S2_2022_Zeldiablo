@@ -1,5 +1,7 @@
 package gameLaby.laby.modele;
 
+import javafx.geometry.Pos;
+
 public class Monstre extends Position {
     /**
      * Constructeur avec coordonnees
@@ -11,7 +13,7 @@ public class Monstre extends Position {
         super(dx, dy);
     }
 
-    public void etreAttire(Personnage p, String action) {
+    public Position etreAttire(Personnage p, String action) {
         int distanceInitiale = this.distanceEntre(p);
         int prochainX = this.x;
         int prochainY = this.y;
@@ -34,18 +36,17 @@ public class Monstre extends Position {
                 break;
         }
         Position futurPos = new Position(prochainX, prochainY);
-        int distanceApresDeplacement = this.distanceEntre(new Position(prochainX, prochainY));
+        int distanceApresDeplacement = futurPos.distanceEntre(p);
+        System.out.println("Distance initiale: " + distanceInitiale);
+        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
 
-        if(distanceInitiale > distanceApresDeplacement) {
-            this.x = futurPos.x;
-            this.y = futurPos.y;
-        } else {
-            if (this.x - futurPos.getX() == 1) this.x++;
-            else if (this.x - futurPos.getX() == -1) this.x--;
-            else if (this.y - futurPos.getY() == 1) this.y++;
-            else if (this.y - futurPos.getY() == -1) this.y--;
+        if (distanceInitiale < distanceApresDeplacement) {
+            if (this.x - futurPos.getX() == 1) futurPos.x += 2;
+            else if (this.x - futurPos.getX() == -1) futurPos.x -= 2;
+            else if (this.y - futurPos.getY() == 1) futurPos.y += 2;
+            else if (this.y - futurPos.getY() == -1) futurPos.y -= 2;
         }
+
+        return futurPos;
     }
-
-
 }
