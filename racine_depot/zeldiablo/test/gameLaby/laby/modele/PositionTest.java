@@ -86,7 +86,7 @@ class PositionTest {
         Position p1=new Position(4, 3);
         Position p2= new Position(0, 0);
         // appel methode
-        int dist=p2.distanceEntre(p1);
+        double dist=p2.distanceEntre(p1);
         // test
         assertEquals(5, dist, "La distance doit etre egale a 5");
     }
