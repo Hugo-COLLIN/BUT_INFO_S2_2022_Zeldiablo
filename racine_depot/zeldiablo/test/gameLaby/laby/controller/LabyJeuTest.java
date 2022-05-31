@@ -7,6 +7,9 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Methode de test de la methode LabyJeu
+ */
 class LabyJeuTest
 {
     /**
