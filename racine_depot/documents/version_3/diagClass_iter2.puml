@@ -50,7 +50,7 @@ class Personnage {
 
 class Monstre {
     + Monstre(dx : int, dy : int)
-    + etreAttire(p : Personnage)
+    + <color:deeppink>etreAttire(p : Personnage)</color>
 }
 
 Labyrinthe --> Position : pos "1"
