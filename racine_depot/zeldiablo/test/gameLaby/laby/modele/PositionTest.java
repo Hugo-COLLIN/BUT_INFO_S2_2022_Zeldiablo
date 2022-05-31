@@ -59,4 +59,14 @@ class PositionTest {
         //Test
         assertFalse(res, "doit etre faux");
     }
+
+    @Test
+    void distance_entre(){
+        // construction position
+        Position p1=new Position(2, 3);
+        // appel methode
+        int dist=p1.distanceEntre(4,1);
+        // test
+        assertEquals(dist, 5, "La distance doit etre egale a 5");
+    }
 }
