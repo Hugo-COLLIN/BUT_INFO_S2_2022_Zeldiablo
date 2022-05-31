@@ -13,7 +13,7 @@ class PositionTest {
     int x, y;
 
     /**
-    Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
+    * Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
      */
     @BeforeEach
     void beforeEach()
@@ -24,7 +24,7 @@ class PositionTest {
     }
 
     /**
-    Test des methodes getX et getY de la classe Position
+    * Test des methodes getX et getY de la classe Position
      */
     @Test
     void test_getters_XY ()
@@ -39,7 +39,7 @@ class PositionTest {
     }
 
     /**
-    Test de la methode etrePresent de la classe Position (cas Present)
+     * Test de la methode etrePresent de la classe Position (cas Present)
      */
     @Test
     void test_etrePresent_present()
@@ -52,7 +52,7 @@ class PositionTest {
     }
 
     /**
-    Test de la methode etrePresent de la classe Position (cas non present)
+     * Test de la methode etrePresent de la classe Position (cas non present)
     */
     @Test
     void test_etrePresent_pasPresent1Att()
@@ -65,7 +65,7 @@ class PositionTest {
     }
 
     /**
-    Test de la methode etrePresent de la classe Position (cas non present avec d autres valeurs)
+     * Test de la methode etrePresent de la classe Position (cas non present avec d autres valeurs)
     */
     @Test
     void test_etrePresent_pasPresent2Att()
@@ -78,7 +78,7 @@ class PositionTest {
     }
 
     /**
-    Test de la methode distance_entre de la classe Position
+     * Test de la methode distance_entre de la classe Position
      */
     @Test
     void distance_entre(){

@@ -4,5 +4,7 @@ Fonctionnalité attendue :
     - Collision entre le héros et les monstres
     - Monstres attirés par le héros
 
+Nous avons rajouté les méthodes etreAttire dans Monstre et
+distanceEntre dans Position.
 Les fonctionnalités attendues fonctionnent correctement.
 Tous les tests passent sans problème.
