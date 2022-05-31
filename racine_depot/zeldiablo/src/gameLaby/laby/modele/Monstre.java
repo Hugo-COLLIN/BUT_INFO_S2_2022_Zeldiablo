@@ -37,8 +37,8 @@ public class Monstre extends Position {
         }
         Position futurPos = new Position(prochainX, prochainY);
         int distanceApresDeplacement = futurPos.distanceEntre(p);
-        System.out.println("Distance initiale: " + distanceInitiale);
-        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
+//        System.out.println("Distance initiale: " + distanceInitiale);
+//        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
 
         if (distanceInitiale < distanceApresDeplacement) {
             if (this.x - futurPos.getX() == 1) futurPos.x += 2;
