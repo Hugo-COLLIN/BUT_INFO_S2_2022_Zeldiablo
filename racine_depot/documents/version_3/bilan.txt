@@ -4,5 +4,5 @@ Fonctionnalité attendue :
     - Collision avec un monstre
     - Monstres attirés par le héros
 
-Toutes les fonctionnalités attendues fonctionnent correctement
-tous les tests passent sans problème
+Les fonctionnalités attendues fonctionnent correctement.
+Tous les tests passent sans problème.

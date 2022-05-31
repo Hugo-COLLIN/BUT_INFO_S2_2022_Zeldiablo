@@ -4,11 +4,14 @@ Fonctionnalité attendue :
     - Ajout de positions initiales à un monstre
     - Afficher le monstre dans l'interface
 
-Toutes les fonctionnalités attendues marchent correctement
-tous les tests passent sans problème
-nous ne pouvons juste pas faire
-le test de vérification que le monstre n'apparaît
-pas dans un mur ou sur le personnage parce que le labyrinthe
-n'est généré qu'à partir de fichier text de ce fait
-deux caractères ne peuvent être au même endroit
+Nous avons externalisé les attributs et méthodes communes aux classes
+Personnage et Monstre dans une classe Position. Les classes Personnage
+et Monstre héritent de cette classe, et la classe Labyrinthe possède un
+objet de type Position au lieu de Personnage.
+Toutes les fonctionnalités attendues fonctionnent correctement.
+Tous les tests passent sans problème.
+Nous ne pouvons simplement pas vérifier que le monstre n'apparaît
+pas sur un mur ou sur le personnage, car le labyrinthe
+n'est généré qu'à partir de fichiers texte. De ce fait,
+deux caractères ne peuvent être au même endroit.
 
