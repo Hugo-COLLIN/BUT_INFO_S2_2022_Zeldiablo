@@ -1,7 +1,7 @@
 FAURE Solène, COLLIN Hugo, AKOO OBONO Rafael Didier Menene, DARDENNE Gregory
 
 Fonctionnalité attendue :
-    - Collision avec un monstre
+    - Collision entre le héros et les monstres
     - Monstres attirés par le héros
 
 Les fonctionnalités attendues fonctionnent correctement.
