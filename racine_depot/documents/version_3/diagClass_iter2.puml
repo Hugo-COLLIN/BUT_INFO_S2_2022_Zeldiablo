@@ -1,5 +1,5 @@
 @startuml
-title Collision avec le héros et attiré par le héros
+title Itération 2 : Collision avec le héros et attiré par le héros
 
 class Labyrinthe {
     + <static> MUR : char {static}
@@ -40,7 +40,7 @@ class Position {
 
     + Position(dx : int, dy : int)
     + etrePresent(dx : int, dy : int) : boolean
-    + <color:deeppink>distanceEntre(int x, int y) : int</color>
+    + <color:deeppink>distanceEntre(pos : Position) : int</color>
     + getX()
     + getY()
 }
@@ -51,7 +51,7 @@ class Personnage {
 
 class Monstre {
     + Monstre(dx : int, dy : int)
-    + <color:deeppink>etreAttire(p : Personnage)</color>
+    + <color:deeppink>etreAttire(perso : Personnage, String action)</color>
 }
 
 Labyrinthe --> Position : pos "1"

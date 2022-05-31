@@ -1,0 +1,8 @@
+FAURE Solène, COLLIN Hugo, AKOO OBONO Rafael Didier Menene, DARDENNE Gregory
+
+Fonctionnalité attendue :
+    - Collision avec un monstre
+    - Monstres attirés par le héros
+
+Toutes les fonctionnalités attendues fonctionnent correctement
+tous les tests passent sans problème

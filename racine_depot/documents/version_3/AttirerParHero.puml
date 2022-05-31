@@ -8,7 +8,7 @@ participant "hero : Personnage" as hero
 -> laby : deplacerPosition("gauche")
 activate laby
 
-    laby -> monstre : deplacerMonstre(hero)
+    laby -> monstre : etreAttire(hero, gauche)
     activate monstre
 
         monstre -> hero : getX()
