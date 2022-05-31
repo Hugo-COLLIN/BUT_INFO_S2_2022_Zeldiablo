@@ -40,7 +40,7 @@ class Position {
 
     + Position(dx : int, dy : int)
     + etrePresent(dx : int, dy : int) : boolean
-    + <color:deeppink>distanceEntre(p : Position) : int</color>
+    + <color:deeppink>distanceEntre(int x, int y) : int</color>
     + getX()
     + getY()
 }
