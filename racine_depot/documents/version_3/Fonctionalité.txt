@@ -1,0 +1,19 @@
+On a choisi deux fonctionnalité pour l'itération 2
+
+Première attendue :
+    Collision avec un monstre
+
+        Critère de validation
+            - La collision fonctionne dans les 4 directions
+            - Si la case est vide, le personnage avance
+            - Le monstre se déplace à chaque fois après le joueur
+
+Deuxième attendue :
+    Monstres attirés par le héros
+
+        Critère de validation
+            - Après son déplacement, un monstre doit
+                être plus proche du héros qu'avant son
+                déplacement (sans prise en compte des murs)
+            - Les monstres soumis aux obstacles peuvent se
+                retrouver bloqués dans des cul-de-sac

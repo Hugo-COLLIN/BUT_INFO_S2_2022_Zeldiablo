@@ -1,0 +1,63 @@
+@startuml
+title Collision avec le héros et attiré par le héros
+
+class Labyrinthe {
+    + <static> MUR : char {static}
+    + <static> PJ : char {static}
+    + <static> MONSTRE : char {static}
+    + <static> VIDE : char {static}
+    + <static> HAUT : String {static}
+    + <static> BAS : String {static}
+    + <static> GAUCHE : String {static}
+    + <static> DROITE : String {static}
+    + murs : boolean
+
+    + Labyrinthe(nom : String)
+    + getSuivant(x : int, y : int, action : String) : int []
+    + deplacerPosition(action : String)
+    + etreFini() : boolean
+    + getLengthY() : int
+    + getLengthX() : int
+    + getMur(x : int, y : int) : boolean
+}
+
+class LabyJeu {
+    + LabyJeu(labyP : Labyrinthe)
+    + update(secondes : double, clavier : Clavier)
+    + init()
+    + etreFini() : boolean
+    + getLaby() : Labyrinthe
+}
+
+class LabyDessin {
+    - <static> TAILLE_CASE : int {static}
+    + dessinerJeu (jeu : Jeu, canvas : Canvas)
+}
+
+class Position {
+    + x : int
+    + y : int
+
+    + Position(dx : int, dy : int)
+    + etrePresent(dx : int, dy : int) : boolean
+    + <color:deeppink>distanceEntre(p : Position) : int</color>
+    + getX()
+    + getY()
+}
+
+class Personnage {
+    + Personnage(dx : int, dy : int)
+}
+
+class Monstre {
+    + Monstre(dx : int, dy : int)
+    + <color:deeppink>etreAttire(p : Personnage)</color>
+}
+
+Labyrinthe --> Position : pos "1"
+Labyrinthe "1" <-- LabyJeu : laby
+
+Monstre -|> Position
+Personnage -|> Position
+
+@enduml
