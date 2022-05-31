@@ -162,6 +162,7 @@ public class Labyrinthe {
             this.pj.x = suivante[0];
             this.pj.y = suivante[1];
         }
+        if(this.monstre != null) this.monstre.etreAttire(this.pj, action);
     }
 
 
