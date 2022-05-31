@@ -1,0 +1,52 @@
+@startuml
+
+title "Monstre attiré par héro lors d'un déplacement sur la gauche"
+participant "laby : Labyrinthe" as laby
+participant "monstre : Monstre" as monstre
+participant "hero : Personnage" as hero
+
+-> laby : deplacerPosition("gauche")
+activate laby
+
+    laby -> monstre : deplacerMonstre(hero)
+    activate monstre
+
+        monstre -> hero : getX()
+        activate hero
+        monstre <-- hero : x : int
+        deactivate hero
+
+        monstre -> hero : getY()
+        activate hero
+        monstre <-- hero : y : int
+        deactivate hero
+
+        monstre -> monstre : distanceEntre(x, y)
+        activate monstre
+        monstre --> monstre : distanceInitiale : int
+        deactivate monstre
+
+        monstre -> monstre : distanceEntre(x+1, y)
+        activate monstre
+        monstre --> monstre : distanceDeplacementGauche : int
+        deactivate monstre
+
+        alt distanceInitiale > distanceDeplacementGauche
+            monstre -> monstre : setX(x+1)
+            activate monstre
+            monstre --> monstre
+            deactivate monstre
+        else distanceInitiale <= distanceDeplacementGauche
+            monstre -> monstre : setX(x-1)
+            activate monstre
+            monstre --> monstre
+            deactivate monstre
+        end
+
+    laby <-- monstre
+    deactivate monstre
+
+<-- laby
+deactivate laby
+
+@enduml
