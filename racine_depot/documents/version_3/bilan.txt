@@ -12,7 +12,7 @@ en utilisant le théorème de Pythagore.
 
 etreAttire prend un objet Personnage et une chaîne décrivant une action. Elle
 utilise la position du monstre et celle du personnage pour calculer une nouvelle
-position pour le monstre qui se rapproche du personnage.
+position pour le monstre qui soit plus proche du personnage que la précédente.
 
 Les fonctionnalités attendues fonctionnent correctement.
 Tous les tests passent sans problème.
