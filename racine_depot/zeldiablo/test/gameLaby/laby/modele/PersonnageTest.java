@@ -27,6 +27,7 @@ public class PersonnageTest {
 
         // Stockage des points de vie initiaux du monstre
         int pvInit=laby.getMonstre().getPv();
+        laby.deplacerPosition(Labyrinthe.HAUT);
 
         // creation d un boolean pour le test
         boolean aEuLieu=false;
