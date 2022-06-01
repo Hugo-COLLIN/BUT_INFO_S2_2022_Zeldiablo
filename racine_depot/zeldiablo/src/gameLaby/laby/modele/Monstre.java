@@ -7,8 +7,8 @@ public class Monstre extends Role {
      * @param dx position selon x
      * @param dy position selon y
      */
-    public Monstre(int dx, int dy) {
-        super(dx, dy);
+    public Monstre(int dx, int dy, int pv) {
+        super(dx, dy, pv);
     }
 
     public Role etreAttire(Personnage p, String action) {
@@ -53,8 +53,19 @@ public class Monstre extends Role {
         return futurPos;
     }
 
-    public void attaquer (Role role)
+    public boolean attaquer (Role role)
     {
+        boolean res = false;
+        if (this.distanceEntre(role) == 1)
+        {
+            role.subirDegats(DEGAT);
+            res = true;
+        }
+        return res;
+    }
 
+    public void subirDegats (int degats)
+    {
+        this.pv -= degats;
     }
 }
