@@ -109,6 +109,11 @@ class LabyJeuTest {
 
     }
 
+    /**
+     * Test du deplacement du personnage lors de lattaque
+     * on simule lappui sur le clavier
+     * @throws IOException
+     */
     @Test
     public void test_attaqueMonstre_eloigne_deplacementjoueur() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
