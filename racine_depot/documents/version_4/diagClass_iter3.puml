@@ -37,21 +37,26 @@ class LabyDessin {
 class Position {
     + x : int
     + y : int
+    + pv : int
 
-    + Position(dx : int, dy : int)
+    + Position(dx : int, dy : int, pvie : int)
     + etrePresent(dx : int, dy : int) : boolean
-    + <color:deeppink>distanceEntre(pos : Position) : int</color>
+    + distanceEntre(pos : Position) : int
+    {abstract} + <color:deeppink>attaquer(pos : Position)</color>
+    + <color:deeppink>setPV(pv : int)</color>
     + getX()
     + getY()
 }
 
 class Personnage {
     + Personnage(dx : int, dy : int)
+    + <color:deeppink>attaquer(pos : Position)</color>
 }
 
 class Monstre {
     + Monstre(dx : int, dy : int)
-    + <color:deeppink>etreAttire(perso : Personnage, String action)</color>
+    + etreAttire(perso : Personnage, String action)
+    + <color:deeppink>attaquer(pos : Position)</color>
 }
 
 Labyrinthe --> Monstre : monstre "1"
