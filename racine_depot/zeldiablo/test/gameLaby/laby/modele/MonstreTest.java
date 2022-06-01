@@ -38,10 +38,32 @@ class MonstreTest {
                 "celle initialle");
     }
 
+    //Tests Attaque des monstres :
     @Test
     void subirDegats_pertePVpos ()
     {
+        //Init
         Monstre m = new Monstre(2, 3, 5);
         Personnage p = new Personnage(2,2, 5);
+
+        //Appel methode
+        m.attaquer(p);
+
+        //Test
+        assertEquals(4, p.getPv(),  "doit etre diminue de 1");
+    }
+
+    @Test
+    void subirDegats_pertePVneg ()
+    {
+        //Init
+        Monstre m = new Monstre(2, 3, 5);
+        Personnage p = new Personnage(2,2, 0);
+
+        //Appel methode
+        m.attaquer(p);
+
+        //Test
+        assertEquals(0, p.getPv(),  "doit etre diminue de 1");
     }
 }
