@@ -1,0 +1,33 @@
+@startuml
+title "Joueur attaque le monstre"
+actor Joueur
+participant "laby : Labyrinthe" as laby
+participant "hero : Personnage" as hero
+participant "monstre : Monstre" as monstre
+
+
+Joueur -> laby : attaquerMonstre()
+note left : Quand la touche "espace" est appuyé
+activate laby
+    laby -> hero : monstreProche(Monstre m)
+    activate hero
+    laby <-- hero : monstreEstProche : boolean
+    deactivate hero
+
+
+    alt monstreEstProche
+        laby -> hero : attaquer(Monstre m)
+        activate hero
+
+            hero -> monstre : subirDegat(int i)
+            activate monstre
+            hero <-- monstre
+            deactivate monstre
+
+        laby <-- hero
+        deactivate hero
+    end
+
+<-- laby
+deactivate laby
+@enduml
