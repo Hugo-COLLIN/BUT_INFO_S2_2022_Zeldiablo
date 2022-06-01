@@ -64,7 +64,7 @@ class MonstreTest {
         m.attaquer(p);
 
         //Test
-        assertEquals(0, p.getPv(),  "doit etre diminue de 1");
+        assertEquals(0, p.getPv(),  "doit valoir 0");
     }
 
     @Test
