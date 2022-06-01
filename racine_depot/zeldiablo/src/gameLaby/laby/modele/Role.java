@@ -65,9 +65,6 @@ public abstract class Role {
         return Math.sqrt(sommeCarree);
     }
 
-    public void subirDegat(int Degat){
-        this.pv--;
-    }
 
     public abstract boolean attaquer(Role role);
 
