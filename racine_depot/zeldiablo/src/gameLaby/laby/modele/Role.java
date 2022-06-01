@@ -10,10 +10,14 @@ public abstract class Role {
      * Position du personnage
      */
     int x, y;
+<<<<<<< HEAD
 
     private int pv;
     public static final int DEGAT = 1;
 
+=======
+cd
+>>>>>>> 8017702 (role)
     /**
      * Constructeur avec coordonnees
      *
@@ -63,6 +67,10 @@ public abstract class Role {
         double distanceY = pos.getY() - y;
         double sommeCarree = Math.pow(distanceX, 2) + Math.pow(distanceY, 2);
         return Math.sqrt(sommeCarree);
+    }
+
+    public void subirDegat(int Degat){
+        this.pv--;
     }
 
     public abstract boolean attaquer(Role role);

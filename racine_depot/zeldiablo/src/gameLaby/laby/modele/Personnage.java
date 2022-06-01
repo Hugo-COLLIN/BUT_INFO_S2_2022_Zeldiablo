@@ -7,8 +7,8 @@ public class Personnage extends Role {
      * @param dx position selon x
      * @param dy position selon y
      */
-    public Personnage(int dx, int dy) {
-        super(dx, dy);
+    public Personnage(int dx, int dy,int pv) {
+        super(dx, dy,pv);
     }
 
     @Override
