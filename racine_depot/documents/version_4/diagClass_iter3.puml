@@ -34,7 +34,7 @@ class LabyDessin {
     + dessinerJeu (jeu : Jeu, canvas : Canvas)
 }
 
-class Role {
+abstract class Role {
     + x : int
     + y : int
     + pv : int
