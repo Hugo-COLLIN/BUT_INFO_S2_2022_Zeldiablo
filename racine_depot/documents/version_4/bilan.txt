@@ -1,19 +1,31 @@
 I. Bilan de l'itération 3
 
-Fonctionnalités attendues pour cette itération :
+> Fonctionnalités attendues pour cette itération :
     - Attaque des monstres
     - Attaque du personnage
 
-Nous avons renommé la classe Position en Role pour que son nom corresponde à sa fonction.
-Nous avons ajouté dans cette classe un attribut pv entier correspondant à des points de vie.
+> Les fonctionnalités attendues fonctionnent correctement.
+    Nous avons renommé la classe "Position" en "Role" pour que son nom corresponde à sa fonction.
 
-Les fonctionnalités attendues fonctionnent correctement.
-Tous les tests passent sans problème.
+    Nous avons ajouté dans cette classe un attribut "pv" entier correspondant à des points de vie.
+    Nous avons également ajouté une méthode abstraite "attaquer" prenant un autre objet Role en paramètre
+    et permettant de retirer des points de vie à un autre objet de type Role grâce à sa methode "subirDegats"
+    qui prend le nombre de points à retirer.
+
+    Enfin, nous avons codé un getter et un setter de points de vie.
+    Les classes Personnage et Monstre implémentent la méthode "attaquer" à partir de la méthode
+    abstraite de Role.
+
+> Tous les tests passent sans problème.
+    Nous avons testé l'attaque de monstre depuis le labyrinthe lorsque le monstre touche le personnage
+    et lorsqu'il y est éloigné.
+    Nous avons également testé l'attaque du monstre envers le personnage et l'attaque du personnage
+    envers le personnage.
 
 
 II. Bilan du projet
 
-Fonctionnalités implémentées durant le projet :
+> Fonctionnalités implémentées durant le projet :
     - Ajout de positions initiales à un monstre
     - Afficher le monstre dans l'interface
     - Collision entre le héros et les monstres
@@ -21,9 +33,13 @@ Fonctionnalités implémentées durant le projet :
     - Attaque des monstres
     - Attaque du personnage
 
-Répartition du travail :
+> Répartition du travail :
     Nous nous sommes répartis le travail assez équitablement.
-    Hugo s'est concentré sur les diagrammes de classe mais a aussi réalisé des
+    Hugo s'est concentré sur les diagrammes de classe, mais a aussi réalisé des
     méthodes de l'implémentation et des tests.
     Grégory s'est plus concentré sur l'implémentation et les diagrammes de séquence.
     Didier et Solène ont réalisés les diagrammes de séquence et les tests.
+
+> Initiatives :
+    Les objets Personnage et Monstre ayant de grandes similarités, nous avons externalisé
+    les méthodes communes dans une classe Role de laquelle Personnage et Monstre héritent.
