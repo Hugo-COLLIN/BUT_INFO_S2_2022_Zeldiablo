@@ -35,6 +35,7 @@ public class MainLaby {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
         LabyJeu jeu = new LabyJeu(laby);
         LabyDessin dessin = new LabyDessin();
+
         MoteurJeu.setFPS(10);
 
         // lancement du jeu

@@ -165,7 +165,7 @@ public class Labyrinthe {
 
         // Deplacement du monstre
         if (monstre == null) return;
-        Position prochain = this.monstre.etreAttire(this.pj, action);
+        Role prochain = this.monstre.etreAttire(this.pj, action);
         boolean mur_est_la = this.murs[prochain.x][prochain.y];
         boolean personnage_est_la = this.pj.etrePresent(prochain.x, prochain.y);
 
@@ -173,6 +173,7 @@ public class Labyrinthe {
             this.monstre.x = prochain.x;
             this.monstre.y = prochain.y;
         }
+        monstre.attaquer(this.pj);
     }
 
 

@@ -1,8 +1,6 @@
 package gameLaby.laby.modele;
 
-import javafx.geometry.Pos;
-
-public class Monstre extends Position {
+public class Monstre extends Role {
     /**
      * Constructeur avec coordonnees
      *
@@ -13,7 +11,7 @@ public class Monstre extends Position {
         super(dx, dy);
     }
 
-    public Position etreAttire(Personnage p, String action) {
+    public Role etreAttire(Personnage p, String action) {
         double distanceInitiale = this.distanceEntre(p);
         int prochainX = this.x;
         int prochainY = this.y;
@@ -35,7 +33,7 @@ public class Monstre extends Position {
                 prochainX--;
                 break;
         }
-        Position futurPos = new Position(prochainX, prochainY);
+        Role futurPos = new Role(prochainX, prochainY);
         double distanceApresDeplacement = futurPos.distanceEntre(p);
 //        System.out.println("Distance initiale: " + distanceInitiale);
 //        System.out.println("Prochaine distance: "  +distanceApresDeplacement);

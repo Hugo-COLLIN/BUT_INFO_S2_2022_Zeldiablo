@@ -35,6 +35,9 @@ public class LabyJeu implements Jeu
             this.laby.deplacerPosition(Labyrinthe.GAUCHE);
         else if (clavier.droite)
             this.laby.deplacerPosition(Labyrinthe.DROITE);
+
+        if (clavier.espace)
+            laby.getPj().attaquer(laby.getMonstre());
         
     }
 

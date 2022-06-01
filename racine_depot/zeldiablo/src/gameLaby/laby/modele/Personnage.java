@@ -1,6 +1,6 @@
 package gameLaby.laby.modele;
 
-public class Personnage extends Position {
+public class Personnage extends Role {
     /**
      * Constructeur avec coordonnees
      *

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Classe de test de la classe Position
  */
 class PositionTest {
-    Position pos;
+    Role pos;
     int x, y;
 
     /**
@@ -20,7 +20,7 @@ class PositionTest {
     {
         x = 2;
         y = 1;
-        pos = new Position(x,y);
+        pos = new Role(x,y);
     }
 
     /**
@@ -83,8 +83,8 @@ class PositionTest {
     @Test
     void distance_entre(){
         // construction position
-        Position p1=new Position(4, 3);
-        Position p2= new Position(0, 0);
+        Role p1=new Role(4, 3);
+        Role p2= new Role(0, 0);
         // appel methode
         double dist=p2.distanceEntre(p1);
         // test

@@ -4,7 +4,7 @@ package gameLaby.laby.modele;
 /**
  * gere un personnage situe en x,y
  */
-public class Position {
+public class Role {
 
     /**
      * Position du personnage
@@ -17,7 +17,7 @@ public class Position {
      * @param dx position selon x
      * @param dy position selon y
      */
-    public Position(int dx, int dy) {
+    public Role(int dx, int dy) {
         this.x = dx;
         this.y = dy;
     }
@@ -54,7 +54,7 @@ public class Position {
         return this.y;
     }
 
-    public double distanceEntre(Position pos) {
+    public double distanceEntre(Role pos) {
         double distanceX = pos.getX() - x;
         double distanceY = pos.getY() - y;
         double sommeCarree = Math.pow(distanceX, 2) + Math.pow(distanceY, 2);
