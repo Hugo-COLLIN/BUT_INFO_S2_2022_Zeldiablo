@@ -33,7 +33,7 @@ public class Monstre extends Role {
                 prochainX--;
                 break;
         }
-        Monstre futurPos = new Monstre(prochainX, prochainY);
+        Monstre futurPos = new Monstre(prochainX, prochainY,0);
         double distanceApresDeplacement = futurPos.distanceEntre(p);
 //        System.out.println("Distance initiale: " + distanceInitiale);
 //        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
@@ -58,7 +58,7 @@ public class Monstre extends Role {
         boolean res = false;
         if (this.distanceEntre(role) == 1)
         {
-            role.subirDegats(DEGAT);
+            role.subirDegats(role.DEGAT);
             res = true;
         }
         return res;
