@@ -80,6 +80,11 @@ class LabyJeuTest {
         assertEquals(1, Py);
     }
 
+    /**
+     *Test du critere de validite où le monstre peut se retrouver enfermé
+     * dans un cul de sac
+     * @throws IOException
+     */
     @Test
     public void test_laby_culdecasc() throws IOException {
 
@@ -109,6 +114,11 @@ class LabyJeuTest {
 
     }
 
+    /**
+     * Test du deplacement du personnage lors de lattaque
+     * on simule lappui sur le clavier
+     * @throws IOException
+     */
     @Test
     public void test_attaqueMonstre_eloigne_deplacementjoueur() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");

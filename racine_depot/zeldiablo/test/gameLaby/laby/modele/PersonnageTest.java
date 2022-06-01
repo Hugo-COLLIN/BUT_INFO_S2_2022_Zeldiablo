@@ -10,17 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class PersonnageTest {
     Labyrinthe laby;
 
-    /*
-    Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
+    /**
+     *     Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
      */
     @BeforeEach
     void beforeEach() throws IOException {
         laby = new Labyrinthe("labySimple/laby1.txt");
     }
 
-    /*
-   Test de la methode attaquer de la classe Personnage (si l'attaque a eu lieu)
-    */
+    /**
+     *      Test de la methode attaquer de la classe Personnage (si l'attaque a eu lieu)
+     */
     @Test
     void test_attaquer_aEuLieu()
     {

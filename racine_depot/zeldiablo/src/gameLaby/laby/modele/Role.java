@@ -58,6 +58,11 @@ public abstract class Role {
         return this.y;
     }
 
+    /**
+     * methode distance entre deux roles
+     * @param pos
+     * @return
+     */
     public double distanceEntre(Role pos) {
         double distanceX = pos.getX() - x;
         double distanceY = pos.getY() - y;
@@ -65,19 +70,36 @@ public abstract class Role {
         return Math.sqrt(sommeCarree);
     }
 
-
+    /**
+     * attaquer en abstrait
+     * @param role
+     * @return
+     */
     public abstract boolean attaquer(Role role);
 
+    /**
+     * methode pour subir les degats
+     * @param degats
+     */
     public void subirDegats (int degats)
     {
         this.setPv(this.getPv()-degats);
         // Permet de mettre la vie a zero si elle descend en dessous
         this.setPv(Math.max(this.getPv(), 0));
     }
+
+    /**
+     * methode retournant le nombre de pv
+     * @return
+     */
     public int getPv() {
         return pv;
     }
 
+    /**
+     * methode modifiant le nombre de pv
+     * @param pv
+     */
     public void setPv(int pv) {
         this.pv = pv;
     }
