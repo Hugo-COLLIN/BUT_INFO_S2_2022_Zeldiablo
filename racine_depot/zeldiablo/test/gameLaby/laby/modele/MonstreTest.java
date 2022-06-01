@@ -66,4 +66,36 @@ class MonstreTest {
         //Test
         assertEquals(0, p.getPv(),  "doit etre diminue de 1");
     }
+
+    @Test
+    void nonDeplacementDuMonstre() {
+        Monstre m = laby.getMonstre();
+        Personnage p = laby.getPj();
+
+
+        laby.deplacerPosition(Labyrinthe.HAUT);
+        Monstre positionInit =new Monstre(m.getX(), m.getY(), m.getPv());
+        laby.deplacerPosition(Labyrinthe.HAUT);
+
+        boolean deplacer = positionInit.getX() == m.getX() || positionInit.getY() == m.getY();
+
+        assertTrue(deplacer, "Le monstre s'est deplace");
+        assertEquals(4, p.getPv(), "Le hero n'a pas perdu des points de vie donc n'a pas ete attaque");
+
+    }
+
+    @Test
+    void deplacementSiNonAttaque() {
+        Monstre m = laby.getMonstre();
+        Personnage p = laby.getPj();
+
+        Monstre positionInit =new Monstre(m.getX(), m.getY(), m.getPv());
+        laby.deplacerPosition(Labyrinthe.HAUT);
+
+        boolean deplacer = positionInit.getX() != m.getX() || positionInit.getY() != m.getY();
+
+        assertTrue(deplacer, "Le monstre ne s'est pas deplace");
+        assertEquals(5, p.getPv(), "Le hero a perdu des points de vie donc a ete attaque");
+
+    }
 }
