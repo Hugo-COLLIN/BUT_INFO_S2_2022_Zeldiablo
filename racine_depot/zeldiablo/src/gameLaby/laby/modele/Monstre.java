@@ -66,6 +66,6 @@ public class Monstre extends Role {
 
     public void subirDegats (int degats)
     {
-        this.pv -= degats;
+        this.setPv(this.getPv()-degats);
     }
 }
