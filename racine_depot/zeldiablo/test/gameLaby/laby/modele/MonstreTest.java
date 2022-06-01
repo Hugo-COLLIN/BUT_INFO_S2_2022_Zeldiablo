@@ -77,7 +77,7 @@ class MonstreTest {
         Monstre positionInit =new Monstre(m.getX(), m.getY(), m.getPv());
         laby.deplacerPosition(Labyrinthe.HAUT);
 
-        boolean deplacer = positionInit.getX() == m.getX() || positionInit.getY() == m.getY();
+        boolean deplacer = positionInit.getX() == m.getX() && positionInit.getY() == m.getY();
 
         assertTrue(deplacer, "Le monstre s'est deplace");
         assertEquals(4, p.getPv(), "Le hero n'a pas perdu des points de vie donc n'a pas ete attaque");
