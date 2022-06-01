@@ -16,4 +16,5 @@ public class Personnage extends Role {
         m.subirDegat(Role.DEGAT);
         return true;
     }
+
 }

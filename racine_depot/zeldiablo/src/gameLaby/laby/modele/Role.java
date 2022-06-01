@@ -71,8 +71,10 @@ public abstract class Role {
 
     public abstract boolean attaquer(Role role);
 
-    public abstract void subirDegats(int degat);
-
+    public void subirDegats (int degats)
+    {
+        this.setPv(this.getPv()-degats);
+    }
     public int getPv() {
         return pv;
     }
