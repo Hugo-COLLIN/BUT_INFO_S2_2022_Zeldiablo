@@ -11,6 +11,9 @@ public abstract class Role {
      */
     int x, y;
 
+    private int pv;
+    private static final int DEGAT = 1;
+
     /**
      * Constructeur avec coordonnees
      *
@@ -62,4 +65,12 @@ public abstract class Role {
     }
 
     public abstract boolean attaquer(Role role);
+
+    public int getPv() {
+        return pv;
+    }
+
+    public void setPv(int pv) {
+        this.pv = pv;
+    }
 }
