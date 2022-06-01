@@ -9,7 +9,7 @@ participant "monstre : Monstre" as monstre
 Joueur -> laby : attaquerMonstre()
 note left : Quand la touche "espace" est appuyé
 activate laby
-    laby -> hero : monstreProche(Monstre m)
+    laby -> hero : monstreProche(monstre)
     activate hero
     laby <-- hero : monstreEstProche : boolean
     deactivate hero
@@ -19,7 +19,12 @@ activate laby
         laby -> hero : attaquer(Monstre m)
         activate hero
 
-            hero -> monstre : subirDegat(int i)
+            hero -> hero : getDegat()
+            activate hero
+            hero --> hero : degat :int
+            deactivate hero
+
+            hero -> monstre : subirDegat(degat)
             activate monstre
             hero <-- monstre
             deactivate monstre
