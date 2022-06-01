@@ -13,24 +13,8 @@ import java.io.IOException;
 
 public class MainLaby {
 
-    public static void main(String[] args) throws IOException {
-
-        /**
-         * A voir si besoin de parametrage
-         *         //int width = 800;
-         *         //int height = 600;
-         *         //int pFPS = 100;
-         *
-         *         // creation des objets
-         *         ...
-         *
-         *         // parametrage du moteur de jeuf
-         *         //MoteurJeu.setTaille(width,height);
-         *         //MoteurJeu.setFPS(pFPS);
-         *
-         *         ...
-         */
-
+    public static void main(String[] args) throws IOException
+    {
         // creation des objets
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
         LabyJeu jeu = new LabyJeu(laby);
