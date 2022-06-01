@@ -39,7 +39,7 @@ public class Clavier {
             case D:
                 this.droite = true;
                 break;
-            case ESCAPE:
+            case SPACE:
                 this.espace = true;
                 break;
 
@@ -75,7 +75,7 @@ public class Clavier {
             case D:
                 this.droite = false;
                 break;
-            case ESCAPE:
+            case SPACE:
                 this.espace = false;
                 break;
 

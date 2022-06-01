@@ -121,11 +121,11 @@ public class Labyrinthe {
                         // pas de mur
                         this.murs[colonne][numeroLigne] = false;
                         // ajoute PJ
-                        this.pj = new Personnage(colonne, numeroLigne);
+                        this.pj = new Personnage(colonne, numeroLigne, 5);
                         break;
                     case MONSTRE:
                         this.murs[colonne][numeroLigne] = false;
-                        this.monstre = new Monstre(colonne, numeroLigne);
+                        this.monstre = new Monstre(colonne, numeroLigne, 5);
                         break;
 
                     default:
