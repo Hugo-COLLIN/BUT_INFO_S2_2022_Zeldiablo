@@ -37,4 +37,11 @@ class MonstreTest {
         assertTrue(distReduite, "La distance entre le monstre et le personnage doit etre soit reduite, soit egale a " +
                 "celle initialle");
     }
+
+    @Test
+    void subirDegats_pertePVpos ()
+    {
+        Monstre m = new Monstre(2, 3, 5);
+        Personnage p = new Personnage(2,2, 5);
+    }
 }

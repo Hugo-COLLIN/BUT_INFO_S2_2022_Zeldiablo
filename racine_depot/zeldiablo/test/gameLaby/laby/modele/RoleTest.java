@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Classe de test de la classe Position
  */
-class PositionTest {
+class RoleTest {
     Monstre pos;
     int x, y;
 
@@ -52,7 +52,7 @@ class PositionTest {
     }
 
     /**
-     * Test de la methode etrePresent de la classe Position (cas non present)
+     * Test de la methode etrePresent de la classe Role (cas non present)
     */
     @Test
     void test_etrePresent_pasPresent1Att()
@@ -78,10 +78,10 @@ class PositionTest {
     }
 
     /**
-     * Test de la methode distance_entre de la classe Position
+     * Test de la methode distance entre de la classe Position
      */
     @Test
-    void distance_entre(){
+    void distance_entre (){
         // construction position
         Monstre p1=new Monstre(4, 3,0);
         Monstre p2= new Monstre(0, 0, 0);
