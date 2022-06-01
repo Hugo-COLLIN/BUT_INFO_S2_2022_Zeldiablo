@@ -74,6 +74,8 @@ public abstract class Role {
     public void subirDegats (int degats)
     {
         this.setPv(this.getPv()-degats);
+        // Permet de mettre la vie a zero si elle descend en dessous
+        this.setPv(Math.max(this.getPv(), 0));
     }
     public int getPv() {
         return pv;
