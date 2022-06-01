@@ -1,6 +1,23 @@
 Ajoute 1 boolean corresp touche espace dans le controlleur clavier de moteruJeu
 
 
-Fonctionnalité :
+Fonctionnalités attendues pour cette itération :
+    - Attaque des monstres
+    - Attaque du personnage
+
+
+
+Fonctionnalités implémentées durant le projet :
+    - Ajout de positions initiales à un monstre
+    - Afficher le monstre dans l'interface
+    - Collision entre le héros et les monstres
+    - Monstres attirés par le héros
+    - Attaque des monstres
+    - Attaque du personnage
 
 Répartition du travail :
+    Nous nous sommes répartis le travail assez équitablement.
+    Hugo s'est concentré sur les diagrammes de classe mais a aussi réalisé des
+    méthodes de l'implémentation et des tests.
+    Grégory s'est plus concentré sur l'implémentation et les diagrammes de séquence.
+    Didier et Solène ont réalisés les diagrammes de séquence et les tests.
