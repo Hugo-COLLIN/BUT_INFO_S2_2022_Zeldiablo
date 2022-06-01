@@ -249,11 +249,5 @@ public class Labyrinthe {
         }
         return S;
     }
-
-    public void attaquerMonstre(){
-        boolean proche=this.pj.distanceEntre(this.monstre)<=1;
-        if(proche){
-            this.pj.attaquer(monstre);
-        }
-    }
+    
 }
