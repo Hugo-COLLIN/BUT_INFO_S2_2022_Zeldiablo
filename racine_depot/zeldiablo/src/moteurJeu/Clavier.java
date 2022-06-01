@@ -9,6 +9,8 @@ public class Clavier {
      */
     public boolean haut, bas, gauche, droite;
 
+    public boolean espace;
+
     /**
      * stocke les commandes
      *
@@ -36,6 +38,9 @@ public class Clavier {
             // si touche droite
             case D:
                 this.droite = true;
+                break;
+            case ESCAPE:
+                this.espace = true;
                 break;
 
         }
@@ -69,6 +74,9 @@ public class Clavier {
             // si touche droite
             case D:
                 this.droite = false;
+                break;
+            case ESCAPE:
+                this.espace = false;
                 break;
 
         }
