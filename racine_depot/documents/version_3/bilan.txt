@@ -4,5 +4,15 @@ Fonctionnalité attendue :
     - Collision entre le héros et les monstres
     - Monstres attirés par le héros
 
+Nous avons rajouté les méthodes etreAttire dans Monstre et
+distanceEntre dans Position.
+
+distanceEntre renvoie la distance entre 2 objets de type Position
+en utilisant le théorème de Pythagore.
+
+etreAttire prend un objet Personnage et une chaîne décrivant une action. Elle
+utilise la position du monstre et celle du personnage pour calculer une nouvelle
+position pour le monstre qui soit plus proche du personnage que la précédente.
+
 Les fonctionnalités attendues fonctionnent correctement.
 Tous les tests passent sans problème.

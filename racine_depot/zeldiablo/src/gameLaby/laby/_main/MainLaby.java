@@ -8,7 +8,7 @@ import moteurJeu.MoteurJeu;
 import java.io.IOException;
 
 /**
- * lance un jeu de type labyrinthe
+ * Lance un jeu de type Labyrinthe
  */
 
 public class MainLaby {
