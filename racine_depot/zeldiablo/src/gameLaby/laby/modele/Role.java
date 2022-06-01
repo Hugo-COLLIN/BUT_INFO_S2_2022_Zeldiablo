@@ -10,14 +10,10 @@ public abstract class Role {
      * Position du personnage
      */
     int x, y;
-<<<<<<< HEAD
 
     private int pv;
     public static final int DEGAT = 1;
 
-=======
-cd
->>>>>>> 8017702 (role)
     /**
      * Constructeur avec coordonnees
      *
