@@ -44,7 +44,7 @@ public class Labyrinthe {
     public boolean[][] murs;
 
     /**
-     * Retourne la case suivante selon une actions
+     * Retourne la case suivante selon une action
      *
      * @param x      case depart
      * @param y      case depart
@@ -156,7 +156,7 @@ public class Labyrinthe {
         // calcule case suivante
         int[] suivante = getSuivant(courante[0], courante[1], action);
         boolean monstre_est_la = this.monstre.etrePresent(suivante[0], suivante[1]);
-        // si c'est pas un mur, on effectue le deplacement
+        // si ce n'est pas un mur, on effectue le deplacement
         if (!this.murs[suivante[0]][suivante[1]] && !monstre_est_la) {
             // on met a jour personnage
             this.pj.x = suivante[0];
@@ -165,6 +165,10 @@ public class Labyrinthe {
 
         // Deplacement du monstre
         if (monstre == null) return;
+
+        boolean aAttaquee = monstre.attaquer(this.pj);
+        System.out.println(aAttaquee);
+        if(aAttaquee) return;
         Role prochain = this.monstre.etreAttire(this.pj, action);
         boolean mur_est_la = this.murs[prochain.x][prochain.y];
         boolean personnage_est_la = this.pj.etrePresent(prochain.x, prochain.y);
@@ -173,7 +177,7 @@ public class Labyrinthe {
             this.monstre.x = prochain.x;
             this.monstre.y = prochain.y;
         }
-        monstre.attaquer(this.pj);
+
     }
 
 

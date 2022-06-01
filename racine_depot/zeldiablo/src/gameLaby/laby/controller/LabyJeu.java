@@ -27,6 +27,11 @@ public class LabyJeu implements Jeu
      */
     public void update(double secondes, Clavier clavier) {
         // deplace le personnage en fonction des touches
+        if (clavier.espace) {
+            laby.getPj().attaquer(laby.getMonstre());
+            return;
+        }
+
         if (clavier.haut)
             this.laby.deplacerPosition(Labyrinthe.HAUT);
         else if (clavier.bas)
@@ -36,8 +41,7 @@ public class LabyJeu implements Jeu
         else if (clavier.droite)
             this.laby.deplacerPosition(Labyrinthe.DROITE);
 
-        if (clavier.espace)
-            laby.getPj().attaquer(laby.getMonstre());
+
         
     }
 
