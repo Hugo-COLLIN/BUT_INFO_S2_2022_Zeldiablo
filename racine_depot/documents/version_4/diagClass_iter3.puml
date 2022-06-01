@@ -1,5 +1,5 @@
 @startuml
-title Itération 2 : Collision avec le héros et attiré par le héros
+title Itération 3 : Attaque des monstres et du personnage
 
 class Labyrinthe {
     + <static> MUR : char {static}
