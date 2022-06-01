@@ -16,6 +16,7 @@ class Labyrinthe {
     + getSuivant(x : int, y : int, action : String) : int []
     + deplacerPosition(action : String)
     + etreFini() : boolean
+    {abstract} + <color:deeppink>attaquer(roleAttaquant : Postion, roleAttaque : Role)</color>
     + getLengthY() : int
     + getLengthX() : int
     + getMur(x : int, y : int) : boolean
@@ -34,12 +35,12 @@ class LabyDessin {
     + dessinerJeu (jeu : Jeu, canvas : Canvas)
 }
 
-class Position {
+class Role {
     + x : int
     + y : int
     + pv : int
 
-    + Position(dx : int, dy : int, pvie : int)
+    + Role(dx : int, dy : int, pvie : int)
     + etrePresent(dx : int, dy : int) : boolean
     + distanceEntre(pos : Position) : int
     {abstract} + <color:deeppink>attaquer(pos : Position)</color>
@@ -51,7 +52,7 @@ class Position {
 
 class Personnage {
     + Personnage(dx : int, dy : int)
-    + <color:deeppink>attaquer(pos : Position)</color>
+    + <color:deeppink>attaquer(posAttaquant : Role, posAttaque : Role)</color>
 }
 
 class Monstre {
@@ -64,7 +65,7 @@ Labyrinthe --> Monstre : monstre "1"
 Labyrinthe -> Personnage : perso "1"
 Labyrinthe "1" <-- LabyJeu : laby
 
-Monstre -|> Position
-Personnage -|> Position
+Monstre -|> Role
+Personnage -|> Role
 
 @enduml
