@@ -4,7 +4,7 @@ package gameLaby.laby.modele;
 /**
  * gere un personnage situe en x,y
  */
-public class Role {
+public abstract class Role {
 
     /**
      * Position du personnage
@@ -60,4 +60,6 @@ public class Role {
         double sommeCarree = Math.pow(distanceX, 2) + Math.pow(distanceY, 2);
         return Math.sqrt(sommeCarree);
     }
+
+    public abstract void attaquer(Role role);
 }
