@@ -1,11 +1,17 @@
-Ajoute 1 boolean corresp touche espace dans le controlleur clavier de moteruJeu
-
+I. Bilan de l'itération 3
 
 Fonctionnalités attendues pour cette itération :
     - Attaque des monstres
     - Attaque du personnage
 
+Nous avons renommé la classe Position en Role pour que son nom corresponde à sa fonction.
+Nous avons ajouté dans cette classe un attribut pv entier correspondant à des points de vie.
 
+Les fonctionnalités attendues fonctionnent correctement.
+Tous les tests passent sans problème.
+
+
+II. Bilan du projet
 
 Fonctionnalités implémentées durant le projet :
     - Ajout de positions initiales à un monstre
