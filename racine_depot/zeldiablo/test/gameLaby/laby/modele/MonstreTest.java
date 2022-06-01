@@ -40,7 +40,7 @@ class MonstreTest {
 
     //Tests Attaque des monstres :
     @Test
-    void subirDegats_pertePVpos ()
+    void attaquer_pertePVpos ()
     {
         //Init
         Monstre m = new Monstre(2, 3, 5);
@@ -54,7 +54,7 @@ class MonstreTest {
     }
 
     @Test
-    void subirDegats_pertePVneg ()
+    void attaquer_pertePVneg ()
     {
         //Init
         Monstre m = new Monstre(2, 3, 5);
