@@ -13,7 +13,7 @@ public class Personnage extends Role {
 
     @Override
     public boolean attaquer(Role m) {
-        m.subirDegat(this.degat);
+        m.subirDegat(Role.DEGAT);
         return true;
     }
 }
