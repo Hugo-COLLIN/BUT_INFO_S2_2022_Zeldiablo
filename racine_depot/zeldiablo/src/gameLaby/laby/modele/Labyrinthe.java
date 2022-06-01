@@ -153,6 +153,10 @@ public class Labyrinthe {
         // case courante
         int[] courante = {this.pj.x, this.pj.y};
 
+        // Attaque du joueur
+        boolean aAttaquee = monstre.attaquer(this.pj);
+
+
         // calcule case suivante
         int[] suivante = getSuivant(courante[0], courante[1], action);
         boolean monstre_est_la = this.monstre.etrePresent(suivante[0], suivante[1]);
@@ -166,8 +170,7 @@ public class Labyrinthe {
         // Deplacement du monstre
         if (monstre == null) return;
 
-        boolean aAttaquee = monstre.attaquer(this.pj);
-        System.out.println(aAttaquee);
+
         if(aAttaquee) return;
         Role prochain = this.monstre.etreAttire(this.pj, action);
         boolean mur_est_la = this.murs[prochain.x][prochain.y];
