@@ -20,9 +20,10 @@ public abstract class Role {
      * @param dx position selon x
      * @param dy position selon y
      */
-    public Role(int dx, int dy) {
+    public Role(int dx, int dy, int pv) {
         this.x = dx;
         this.y = dy;
+        this.pv = pv;
     }
 
     /**
