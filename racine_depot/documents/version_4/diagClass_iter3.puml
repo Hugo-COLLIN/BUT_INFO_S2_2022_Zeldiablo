@@ -43,6 +43,7 @@ class Position {
     + etrePresent(dx : int, dy : int) : boolean
     + distanceEntre(pos : Position) : int
     {abstract} + <color:deeppink>attaquer(pos : Position)</color>
+    + <color:deeppink>setPV(pv : int)</color>
     + getX()
     + getY()
 }
