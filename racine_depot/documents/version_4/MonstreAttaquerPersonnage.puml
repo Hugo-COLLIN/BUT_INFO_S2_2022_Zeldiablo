@@ -1,0 +1,18 @@
+@startuml
+title "Monstre attaquant un Personnage"
+
+
+participant Monstre as monst
+participant Personnage as perso
+
+activate monst
+monst->perso:attaquer(perso)
+activate perso
+perso->pv:setPV(pv.getPV-1)
+activate pv
+pv-->perso
+deactivate pv
+perso-->monst
+deactivate perso
+
+@enduml
