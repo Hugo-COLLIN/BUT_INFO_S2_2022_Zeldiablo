@@ -233,10 +233,19 @@ public class Labyrinthe {
         return this.monstre;
     }
 
+    /**
+     * getteur de Personnage
+     *
+     * @return
+     */
     public Personnage getPj() {
         return this.pj;
     }
 
+    /**
+     *
+     * @return
+     */
     public String toString() {
         String S = "";
         for (int y = 0; y < this.getLengthY(); y++) {

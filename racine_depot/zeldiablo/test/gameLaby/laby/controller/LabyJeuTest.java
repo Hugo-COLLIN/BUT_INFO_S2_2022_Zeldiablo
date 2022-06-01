@@ -80,6 +80,11 @@ class LabyJeuTest {
         assertEquals(1, Py);
     }
 
+    /**
+     *Test du critere de validite où le monstre peut se retrouver enfermé
+     * dans un cul de sac
+     * @throws IOException
+     */
     @Test
     public void test_laby_culdecasc() throws IOException {
 

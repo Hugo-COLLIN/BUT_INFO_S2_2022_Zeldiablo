@@ -11,6 +11,13 @@ public class Monstre extends Role {
         super(dx, dy, pv);
     }
 
+    /**
+     * fonction fesant que le monstre est attirer a le personnage
+     *
+     * @param p
+     * @param action
+     * @return
+     */
     public Role etreAttire(Personnage p, String action) {
         double distanceInitiale = this.distanceEntre(p);
         int prochainX = this.x;
@@ -33,11 +40,9 @@ public class Monstre extends Role {
                 prochainX--;
                 break;
         }
-        Monstre futurPos = new Monstre(prochainX, prochainY,0);
+        Monstre futurPos = new Monstre(prochainX, prochainY, 0);
         double distanceApresDeplacement = futurPos.distanceEntre(p);
-//        System.out.println("Distance initiale: " + distanceInitiale);
-//        System.out.println("Prochaine distance: "  +distanceApresDeplacement);
-//
+
         if (distanceInitiale < distanceApresDeplacement) {
             if (this.x - futurPos.getX() == 1) futurPos.x += 2;
             else if (this.x - futurPos.getX() == -1) futurPos.x -= 2;
@@ -53,11 +58,11 @@ public class Monstre extends Role {
         return futurPos;
     }
 
-    public boolean attaquer (Role role)
-    {
+    @Override
+
+    public boolean attaquer(Role role) {
         boolean res = false;
-        if (this.distanceEntre(role) == 1)
-        {
+        if (this.distanceEntre(role) == 1) {
             role.subirDegats(role.DEGAT);
             res = true;
         }

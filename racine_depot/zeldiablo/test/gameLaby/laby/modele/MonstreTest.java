@@ -11,16 +11,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class MonstreTest {
     Labyrinthe laby;
 
-    /*
-    Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
+    /**
+     *Creation d une position afin de pouvoir l utiliser dans les tests ci dessous
      */
     @BeforeEach
     void beforeEach() throws IOException {
        laby = new Labyrinthe("labySimple/laby1.txt");
     }
 
-    /*
-    Test de la methode etreAttire de la classe Monstre
+    /**
+     *Test de la methode etreAttire de la classe Monstre
      */
     @Test
     void test_etreAttire()
@@ -38,7 +38,9 @@ class MonstreTest {
                 "celle initialle");
     }
 
-    //Tests Attaque des monstres :
+    /**
+     *     Tests Attaque des monstres :
+     */
     @Test
     void attaquer_pertePVpos ()
     {
@@ -53,6 +55,9 @@ class MonstreTest {
         assertEquals(4, p.getPv(),  "doit etre diminue de 1");
     }
 
+    /**
+     * test pertePv negatif
+     */
     @Test
     void attaquer_pertePVneg ()
     {
@@ -67,6 +72,9 @@ class MonstreTest {
         assertEquals(0, p.getPv(),  "doit valoir 0");
     }
 
+    /**
+     * test deplacement du monstre lors de son attaque
+     */
     @Test
     void nonDeplacementDuMonstre() {
         Monstre m = laby.getMonstre();
@@ -84,6 +92,9 @@ class MonstreTest {
 
     }
 
+    /**
+     * deplacement du monstre si non attaque
+     */
     @Test
     void deplacementSiNonAttaque() {
         Monstre m = laby.getMonstre();
