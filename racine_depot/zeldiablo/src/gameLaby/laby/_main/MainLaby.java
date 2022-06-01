@@ -24,7 +24,7 @@ public class MainLaby {
          *         // creation des objets
          *         ...
          *
-         *         // parametrage du moteur de jeu
+         *         // parametrage du moteur de jeuf
          *         //MoteurJeu.setTaille(width,height);
          *         //MoteurJeu.setFPS(pFPS);
          *

@@ -75,4 +75,18 @@ class LabyJeuTest
         assertEquals(5, Px);
         assertEquals(1,Py);
     }
+    @Test
+    public void test_laby_culdecasc() throws IOException {
+
+        Labyrinthe laby=new Labyrinthe("labySimple/laby_test_culdesac.txt");
+
+        laby.deplacerPosition(Labyrinthe.DROITE);
+        assertEquals(laby.getMonstre().etrePresent(laby.getMonstre().getX(),laby.getMonstre().getY()),true);
+        laby.deplacerPosition(Labyrinthe.GAUCHE);
+        assertEquals(laby.getMonstre().etrePresent(laby.getMonstre().getX(),laby.getMonstre().getY()),true);
+        laby.deplacerPosition(Labyrinthe.BAS);
+        assertEquals(laby.getMonstre().etrePresent(laby.getMonstre().getX(),laby.getMonstre().getY()),true);
+        laby.deplacerPosition(Labyrinthe.HAUT);
+        assertEquals(laby.getMonstre().etrePresent(laby.getMonstre().getX(),laby.getMonstre().getY()),true);
+    }
 }
