@@ -176,6 +176,9 @@ public class Labyrinthe {
         monstre.attaquer(this.pj);
     }
 
+    public boolean monstreProche(){
+        return this.pj.distanceEntre(this.monstre)<=1;
+    }
 
     /**
      * Le jeu n'est jamais fini
@@ -247,5 +250,11 @@ public class Labyrinthe {
             S += '\n';
         }
         return S;
+    }
+    public void attaquerMonstre(){
+        boolean proche=this.monstreProche();
+        if(proche){
+            this.pj.attaquer(monstre);
+        }
     }
 }

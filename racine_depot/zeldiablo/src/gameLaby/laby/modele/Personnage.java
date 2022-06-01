@@ -10,4 +10,10 @@ public class Personnage extends Role {
     public Personnage(int dx, int dy) {
         super(dx, dy);
     }
+
+    @Override
+    public boolean attaquer(Role m) {
+        m.subirDegat(this.degat);
+        return true;
+    }
 }

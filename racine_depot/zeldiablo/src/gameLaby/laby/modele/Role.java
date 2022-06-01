@@ -61,5 +61,5 @@ public abstract class Role {
         return Math.sqrt(sommeCarree);
     }
 
-    public abstract void attaquer(Role role);
+    public abstract boolean attaquer(Role role);
 }
