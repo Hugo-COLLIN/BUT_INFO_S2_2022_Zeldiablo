@@ -1,6 +1,11 @@
 package gameLaby.laby.controller;
 
 import gameLaby.laby.modele.Labyrinthe;
+import gameLaby.laby.modele.Monstre;
+import gameLaby.laby.modele.Personnage;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import moteurJeu.Clavier;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -107,8 +112,21 @@ class LabyJeuTest {
     @Test
     public void test_attaqueMonstre_eloigne_deplacementjoueur() throws IOException {
         Labyrinthe laby = new Labyrinthe("labySimple/laby1.txt");
-        assertEquals(5, laby.getMonstre().getPv());
-        laby.getPj().attaquer(laby.getMonstre());
-        assertEquals(5, laby.getMonstre().getPv());
+        Personnage p = laby.getPj();
+        Monstre m = laby.getMonstre();
+        int initPV = m.getPv();
+        int InitX = p.getX();
+        int InitY = p.getY();
+
+        Clavier clavier = new Clavier();
+        clavier.espace = true;
+        clavier.haut = true;
+        LabyJeu labyJeu = new LabyJeu(laby);
+        labyJeu.update(0, clavier);
+
+        assertEquals(InitX, p.getX(), "Le personnage s'est deplace en X");
+        assertEquals(InitY, p.getY(), "Le personnage s'est deplace en Y");
+        assertEquals(initPV, m.getPv(), "Le monstre a ete attaque !");
+
     }
 }
