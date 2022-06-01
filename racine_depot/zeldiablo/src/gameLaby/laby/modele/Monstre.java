@@ -52,4 +52,9 @@ public class Monstre extends Role {
         }
         return futurPos;
     }
+
+    public void attaquer (Role role)
+    {
+
+    }
 }
