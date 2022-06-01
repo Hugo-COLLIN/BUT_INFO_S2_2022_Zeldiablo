@@ -2,17 +2,20 @@
 title "Monstre attaquant un Personnage"
 
 
-participant Monstre as monst
-participant Personnage as perso
+participant "monstre : Monstre" as monst
+participant "perso : Personnage" as perso
 
+->monst:attaquer(perso)
 activate monst
-monst->perso:attaquer(perso)
+monst->perso:getPV()
 activate perso
-perso->pv:setPV(pv.getPV-1)
-activate pv
-pv-->perso
-deactivate pv
-perso-->monst
+monst<--perso : pv
+deactivate perso
+monst->perso:setPV(pv - 1)
+activate perso
+monst<--perso
+deactivate perso
+<--monst
 deactivate perso
 
 @enduml
