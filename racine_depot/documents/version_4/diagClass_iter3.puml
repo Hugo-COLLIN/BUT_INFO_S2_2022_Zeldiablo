@@ -43,6 +43,7 @@ abstract class Role {
     + etrePresent(dx : int, dy : int) : boolean
     + distanceEntre(pos : Position) : int
     {abstract} + <color:deeppink>attaquer(role : Role)</color>
+    + <color:deeppink>subirDegats(degats : int)</color>
     + getX()
     + getY()
     + <color:deeppink>getPV(pv : int)</color>
