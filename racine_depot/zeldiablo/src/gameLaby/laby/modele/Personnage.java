@@ -14,7 +14,7 @@ public class Personnage extends Role {
     @Override
     public boolean attaquer(Role m) {
         if (this.distanceEntre(m) == 1)
-            m.subirDegat(Role.DEGAT);
+            m.subirDegats(Role.DEGAT);
         return true;
     }
 
